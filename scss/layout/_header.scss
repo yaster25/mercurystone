@@ -433,7 +433,7 @@ header{
 }
 
 .body-search-active{
-    .main-wrapper section{
+    .main-wrapper section, .main-wrapper .section{
         position: relative;
         &:before{
             content: "";
@@ -747,6 +747,13 @@ body.menu-subnav-open{
    
 }
 
-@media screen and (max-width: 374px) {
-    
+@media screen and (max-width: 350px) {
+    .header-btns{
+        width: 100%;
+        text-align: center;
+    }
+    .header-btn {
+        padding: 0 8px;
+        letter-spacing: -0.3px;
+    }
 }

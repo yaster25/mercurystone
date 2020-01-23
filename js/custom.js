@@ -165,12 +165,14 @@ function initSlider() {
                   }
                 },
                 {
-                  breakpoint: 639,
+                  breakpoint: 640,
                   settings: "unslick"
                 }
               ]
         });
     });
+     
+    
      
      $('.js-product-slider-2').each(function () {
           $(this).slick({
@@ -179,7 +181,7 @@ function initSlider() {
             dots:false,
             slidesToShow: 4,
             slidesToScroll: 4,
-            appendArrows: $(this).parents('.slider-wrapper').find('.slider-arrows'),
+            appendArrows: $(this).parents('.slider-wrapper').find('.slider-nav .slider-arrows'),
             swipeToSlide:true,
              centerMode:false,
             responsive: [
@@ -199,7 +201,7 @@ function initSlider() {
                   }
                 },
                 {
-                  breakpoint: 639,
+                  breakpoint: 640,
                   settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -209,6 +211,14 @@ function initSlider() {
               ]
         });
     });
+     
+     
+      $(window).on('resize orientationchange', function() {
+         
+          $('.product-item').matchHeight();
+          
+        });
+     
      
      /*END PRODUCT SLIDER*/
      
@@ -234,7 +244,7 @@ function initSlider() {
                   }
                 },
                 {
-                  breakpoint: 639,
+                  breakpoint: 640,
                   settings: "unslick"
                 }
               ]
@@ -270,6 +280,20 @@ function initSlider() {
              $(this).parents('.selectric-wrapper').addClass('selectric-selected');
           },
      });
+     /*$('.select-steps').selectric({
+         disableOnMobile: false,
+         
+         nativeOnMobile: true,
+         onChange: function() {
+            //alert('Change');
+             $(this).parents('.selectric-wrapper').addClass('selectric-selected');
+             var link=$(this).parents('.selectric-wrapper').find('select').attr('data-href');
+            // window.location.href = ''+link;
+          },
+     });
+     */
+     
+    
      
      
      $.datetimepicker.setLocale('ru');
@@ -450,7 +474,11 @@ function initSlider() {
 		});
      
      
-     initSlider();
+     
+     
+     if($('#filter-slider-prices').length){
+         initSlider();
+     }
      
      /* mobile filter*/
     $('.js-filter-mobile').on('click', function(event) {
@@ -510,8 +538,216 @@ function initSlider() {
     /* mobile currency*/
      
      
+     $('.tooltip').tooltipster({
+        contentCloning: true, 
+        // trigger:'click',
+         side:'top'
+    });
      
      
+     $('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$(this).parents('.tabs-wrapper').find('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+     
+     $('.tab-content__title').click(function(){
+		$(this).toggleClass('active');
+         $(this).next('.tab-content__content').slideToggle();
+	})
+     
+     /*gallery slider*/
+     $('.js-gallery-slider').each(function () {
+          $(this).slick({
+            infinite: true,
+            arrows:true,
+            dots:false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            appendArrows: $(this).parents('.slider-wrapper').find('.slider-nav .slider-arrows'),
+            swipeToSlide:true,
+             centerMode:false,
+            responsive: [
+                {
+                  breakpoint: 1140,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 740,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 640,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    appendArrows: $(this).parents('.slider-wrapper').find('.slider-arrows-m'),
+                  }
+                }
+              ]
+        });
+    });
+     
+     
+      $('#step-select-1').selectric({
+         disableOnMobile: false,
+         nativeOnMobile: false,
+         onChange: function() {            
+             $(this).parents('.selectric-wrapper').addClass('selectric-selected');
+             $("#step-select-2").prop('selectedIndex', 0).removeAttr("disabled").selectric('refresh');
+             $("#step-select-3").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
+             $("#step-select-4").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
+             
+             var type=$(this).val();
+             $('#quick-choose-type .quick-choose-item').show();
+             $('#quick-choose-type .quick-choose-item:not([data-type="'+type+'"])').hide();
+             
+             $('.quick-choose-step-1').removeClass('active');
+             $('.quick-choose-step-2').addClass('hidden');
+             
+             if($(this).hasClass('step-goback')){
+                window.location.href = "02_коллекция-шаг-1-2-3.html"; 
+             }
+             
+          },
+     });
+     
+     $('#step-select-2').selectric({
+         disableOnMobile: false,
+         nativeOnMobile: false,
+         onChange: function() {
+            //alert('Change');
+             $(this).parents('.selectric-wrapper').addClass('selectric-selected');
+             $("#step-select-3").prop('selectedIndex', 0).removeAttr("disabled").selectric('refresh');
+             $("#step-select-4").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
+             
+             var type=$("#step-select-1").val();
+             var depth=$(this).val();             
+             
+             $('#quick-choose-type .quick-choose-item[data-type="'+type+'"]').show();
+             $('#quick-choose-type .quick-choose-item:not([data-depth="'+depth+'"])').hide();
+             $('.quick-choose-step-1').addClass('active');
+             $('.quick-choose-step-2').removeClass('hidden');
+             if($(this).hasClass('step-goback')){
+                window.location.href = "02_коллекция-шаг-1-2-3.html"; 
+             }
+          },
+     });
+     
+     $('#step-select-3').selectric({
+         disableOnMobile: false,
+         nativeOnMobile: false,
+         onChange: function() {
+            //alert('Change');
+             $(this).parents('.selectric-wrapper').addClass('selectric-selected');
+             //$('.form-steps-collection').submit();
+             window.location.href = "05_стр-товара.html";
+          },
+     });
+     $('#step-select-4').selectric({
+         disableOnMobile: false,
+         nativeOnMobile: false,
+         onChange: function() {
+             $(this).parents('.selectric-wrapper').addClass('selectric-selected');
+             var size=$(this).val();          
+             $('#quick-choose-size .quick-choose-item-2').removeClass('active');
+             $('#quick-choose-size .quick-choose-item-2[data-size="'+size+'"]').addClass('active');
+          },
+     });
+     
+     $('.quick-choose-item').on('click', function(event) {
+         if(!$('.quick-choose-step-1').hasClass('active')){
+        
+            var type=$(this).attr('data-type');
+            var depth=$(this).attr('data-depth');
+
+            $("#step-select-1").val(type).change().selectric('refresh');
+            $("#step-select-1").parents('.selectric-wrapper').addClass('selectric-selected');
+            $("#step-select-2").removeAttr("disabled").selectric('refresh');
+            $("#step-select-2").val(depth).change().selectric('refresh');  
+            $("#step-select-2").parents('.selectric-wrapper').addClass('selectric-selected');
+            $("#step-select-3").removeAttr("disabled").selectric('refresh');
+            $("#step-select-4").prop("disabled", "disabled").selectric('refresh');
+            $('.quick-choose-step-1').addClass('active');
+            $('.quick-choose-step-2').removeClass('hidden');
+            $('#quick-choose-type .quick-choose-item:not([data-depth="'+depth+'"])').hide();
+            $('#quick-choose-type .quick-choose-item:not([data-type="'+type+'"])').hide();
+             return false;
+        }
+         
+	});
+     
+     $('.js-quick-choose-more').on('click', function(event) {
+         $(this).parents('.quick-choose-step').find('.quick-choose').find('.quick-choose-item').removeClass('hidden');
+         $(this).hide();
+         return false;
+     });
+     
+     
+     
+     $('.quick-choose-item-2').on('click', function(event) {
+        var size=$(this).attr('data-size');
+        $('#quick-choose-size .quick-choose-item-2').removeClass('active');
+         $(this).addClass('active');
+        $("#step-select-4").val(size).change().selectric('refresh');
+        $("#step-select-4").parents('.selectric-wrapper').addClass('selectric-selected');
+        return false;
+	});
+     
+     $('.js-quick-choose-size-more').on('click', function(event) {
+         $(this).parents('.quick-choose-step').find('.quick-choose').find('.quick-choose__col').removeClass('hidden');
+         $(this).hide();
+         return false;
+     });
+     
+     
+     $('.js-product-single-gallery').each(function () {
+          $(this).slick({
+            infinite: true,
+            arrows:true,
+            dots:false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            swipeToSlide:true,
+            centerMode:false            
+        });
+    });
+     
+     
+     $('.calc-form__btn-plus').on('click', function(event) {
+         var val=$(this).parents('.calc-form').find('.calc-form__input').val();
+        
+         var new_val = parseInt(val) + 1;
+         $(this).parents('.calc-form').find('.calc-form__input').val(new_val)
+         return false;
+     });
+     
+     $('.calc-form__btn-minus').on('click', function(event) {
+         var val=$(this).parents('.calc-form').find('.calc-form__input').val();
+        
+         var new_val = parseInt(val) - 1;
+         
+         if(new_val<1) new_val=1;
+         $(this).parents('.calc-form').find('.calc-form__input').val(new_val)
+         return false;
+     });
      
 		
  });
