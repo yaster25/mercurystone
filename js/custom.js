@@ -171,9 +171,7 @@ function initSlider() {
               ]
         });
     });
-     
-    
-     
+      
      $('.js-product-slider-2').each(function () {
           $(this).slick({
             infinite: true,
@@ -538,11 +536,13 @@ function initSlider() {
     /* mobile currency*/
      
      
-     $('.tooltip').tooltipster({
-        contentCloning: true, 
-        // trigger:'click',
-         side:'top'
-    });
+     if($('.tooltip').length){
+        $('.tooltip').tooltipster({
+            contentCloning: true, 
+            // trigger:'click',
+             side:'top'
+        });    
+     }
      
      
      $('ul.tabs li').click(function(){
@@ -749,8 +749,35 @@ function initSlider() {
          return false;
      });
      
+     
+     
+     if($('.aside-sticky').length){         
+         var sticky = new Sticky('.aside-sticky');
+     }
+     
+     $("#formPersonal").validate({
+			rules: {
+				name: "required",
+				password : {
+                    minlength : 5
+                },
+                password_confirm : {
+                    minlength : 5,
+                    equalTo : "#password"
+                }
+			},
+			messages: {
+				name: "Необходимо заполнить поле «ФИО».",
+				password: "Необходимо ввести более 4 символов.",
+                password_confirm: {
+                  minlength: "Необходимо ввести более 4 символов.",
+                  equalTo: "Пароли не совпадают."
+                }
+				
+			}
+		});
+     
+     
+     
 		
  });
-
-
-
