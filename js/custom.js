@@ -777,7 +777,69 @@ function initSlider() {
 			}
 		});
      
+     $('.bookmatch-item').click(function(){
+         $(this).parents('.bookmatch-list').find('.bookmatch-item').removeClass('active');
+         $(this).addClass('active');
+     })
      
+     $('.bookmatch-item-v').click(function(){
+         $(this).parents('.bookmatch-list-v').find('.bookmatch-item-v').removeClass('active');
+         $(this).addClass('active');
+     })
+     
+     $('.bookmatch-item-v__img-wr').matchHeight();
+     
+     
+     $('.js-compare-slider').each(function () {
+          $(this).slick({
+            infinite: false,
+            arrows:true,
+            dots:false,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            appendArrows: $(this).parents('.slider-wrapper').find('.slider-arrows'),
+            swipeToSlide:true,
+            centerMode:false,
+            variableWidth:true,             
+            responsive: [
+                {
+                  breakpoint: 1141,
+                  settings: {
+                    slidesToShow: 4
+                  }
+                },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 3
+                  }
+                },
+                {
+                  breakpoint: 840,
+                  settings: {
+                    slidesToShow: 2
+                  }
+                },
+                {
+                  breakpoint: 580,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+              ]
+        });
+    });
+     
+     $('.c-row-1').matchHeight();
+     $('.c-row-2').matchHeight();
+     $('.c-row-3').matchHeight();
+     $('.c-row-4').matchHeight();
+     $('.c-row-5').matchHeight();
+     $('.c-row-6').matchHeight();
+     $('.c-row-7').matchHeight();
+     $('.c-row-8').matchHeight();
+     $('.c-row-9').matchHeight();
+     $('.c-row-10').matchHeight();
      
 		
  });
