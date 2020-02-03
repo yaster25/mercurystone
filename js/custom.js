@@ -841,5 +841,110 @@ function initSlider() {
      $('.c-row-9').matchHeight();
      $('.c-row-10').matchHeight();
      
+     $('.contact-item').matchHeight();
+     
+     $('.why-item').matchHeight();
+     
+     if($('.news-item__text').length){
+         $(".news-item__text").dotdotdot({
+            height:60
+        });         
+     }
+     
+     $("#formCooperation").validate({
+			rules: {
+				name: "required",
+				phone: "required",
+                email: {
+					required: true,
+					email: true
+				},
+                company: "required",
+				
+			},
+			messages: {
+				name: "Необходимо заполнить поле «Имя».",
+				phone: "Необходимо заполнить поле «Телефон».",
+				email: {
+                    required: "Необходимо заполнить поле «E-mail».",
+					email: "Введите корректный адрес электронной почты."
+                },
+                company: "Необходимо заполнить поле «OOO».",
+				
+			}
+		});
+     
+     $("#formStoneOrder").validate({
+			rules: {
+				name: "required",
+				phone: "required",
+                email: {
+					required: true,
+					email: true
+				},
+                material: "required",
+				
+			},
+			messages: {
+				name: "Необходимо заполнить поле «Имя».",
+				phone: "Необходимо заполнить поле «Телефон».",
+				email: {
+                    required: "Необходимо заполнить поле «E-mail».",
+					email: "Введите корректный адрес электронной почты."
+                },
+                material: "Необходимо заполнить поле «Комментарий».",
+				
+			}
+		});
+     
+     
+     if($('#map').length){
+         initMap();
+     }
 		
  });
+
+
+/*
+	By Osvaldas Valutis, www.osvaldas.info
+	Available for use under the MIT License
+*/
+
+'use strict';
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));
+
+
+
+function initMap() {
+  var uluru = {lat: 55.372967, lng: 37.5599753};
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 16, center: uluru, disableDefaultUI: true});
+  var marker = new google.maps.Marker({position: uluru, map: map, title: 'Бережковский проезд, д.8'});
+}
