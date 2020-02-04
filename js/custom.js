@@ -851,6 +851,11 @@ function initSlider() {
         });         
      }
      
+     $('.faq-item__title').click(function(){
+		$(this).toggleClass('active');
+         $(this).next('.faq-item__content').slideToggle();
+	})
+     
      $("#formCooperation").validate({
 			rules: {
 				name: "required",
@@ -896,6 +901,145 @@ function initSlider() {
 				
 			}
 		});
+     
+     $("#formQuestion").validate({
+			rules: {
+				name: "required",
+				phone: "required",
+                email: {
+					required: true,
+					email: true
+				},
+                question: "required",
+				
+			},
+			messages: {
+				name: "Необходимо заполнить поле «Имя».",
+				phone: "Необходимо заполнить поле «Телефон».",
+				email: {
+                    required: "Необходимо заполнить поле «E-mail».",
+					email: "Введите корректный адрес электронной почты."
+                },
+                question: "Необходимо заполнить поле «Текст вопроса».",
+				
+			}
+		});
+     
+     $("#formRegister1").validate({
+			rules: {
+				name: "required",
+				phone: "required",
+				company: "required",
+                email: {
+					required: true,
+					email: true
+				},
+                password : {
+                    required: true,
+                    minlength : 5
+                },
+                password_confirm : {
+                    required: true,
+                    minlength : 5,
+                    equalTo : "#password"
+                }
+				
+			},
+			messages: {
+				name: "Необходимо заполнить поле «Имя».",
+				phone: "Необходимо заполнить поле «Телефон».",
+				company: "Необходимо заполнить поле «Компания».",
+				email: {
+                    required: "Необходимо заполнить поле «E-mail».",
+					email: "Введите корректный адрес электронной почты."
+                },
+                password:  {
+                  minlength: "Необходимо ввести более 4 символов.",
+                  required: "Необходимо заполнить поле «Пароль».",
+                },
+                password_confirm: {
+                  minlength: "Необходимо ввести более 4 символов.",
+                  equalTo: "Пароли не совпадают.",
+                    required: "Необходимо заполнить поле «Повторить пароль».",
+                }
+				
+			}
+		});
+     
+     $("#formRegister2").validate({
+			rules: {
+				name: "required",
+                email: {
+					required: true,
+					email: true
+				},
+                password : {
+                    required: true,
+                    minlength : 5
+                },
+                password_confirm : {
+                    required: true,
+                    minlength : 5,
+                    equalTo : "#password"
+                }
+				
+			},
+			messages: {
+				name: "Необходимо заполнить поле «Имя».",				
+				email: {
+                    required: "Необходимо заполнить поле «E-mail».",
+					email: "Введите корректный адрес электронной почты."
+                },
+                password:  {
+                  minlength: "Необходимо ввести более 4 символов.",
+                  required: "Необходимо заполнить поле «Пароль».",
+                },
+                password_confirm: {
+                  minlength: "Необходимо ввести более 4 символов.",
+                  equalTo: "Пароли не совпадают.",
+                    required: "Необходимо заполнить поле «Повторить пароль».",
+                }
+				
+			}
+		});
+     $("#formRegister3").validate({
+			rules: {
+				name: "required",
+                email: {
+					required: true,
+					email: true
+				},
+                password : {
+                    required: true,
+                    minlength : 5
+                },
+                password_confirm : {
+                    required: true,
+                    minlength : 5,
+                    equalTo : "#password"
+                }
+				
+			},
+			messages: {
+				name: "Необходимо заполнить поле «Имя».",				
+				email: {
+                    required: "Необходимо заполнить поле «E-mail».",
+					email: "Введите корректный адрес электронной почты."
+                },
+                password:  {
+                  minlength: "Необходимо ввести более 4 символов.",
+                  required: "Необходимо заполнить поле «Пароль».",
+                },
+                password_confirm: {
+                  minlength: "Необходимо ввести более 4 символов.",
+                  equalTo: "Пароли не совпадают.",
+                    required: "Необходимо заполнить поле «Повторить пароль».",
+                }
+				
+			}
+		});
+     
+     
      
      
      if($('#map').length){
