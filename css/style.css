@@ -2081,21 +2081,20 @@ ul.tabs li.current:before { width: 100%; }
 .banner-phone { width: 100%; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex !important; flex-direction: column; justify-content: center; align-items: center; background: url("../img/bg-banner-phone-2.jpg") no-repeat 14% bottom, url("../img/bg-banner-phone-1.jpg") no-repeat center right; background-color: #759f05; height: 150px; padding: 15px 30px; font-size: 24px; color: #fff; font-weight: 900; line-height: 1.6; margin-top: 60px; }
 .banner-phone a { font-size: 34px; color: #fff; white-space: nowrap; }
 
-.item-vacancy { border: 1px solid #e8e8e8; margin-bottom: 20px; }
+.item-vacancy { border: 1px solid #e8e8e8; margin-bottom: 20px; font-size: 14px; color: #4c5055; line-height: 1.45; }
 .item-vacancy:last-child { margin-bottom: 0; }
 .item-vacancy__name { font-size: 18px; font-weight: 900; color: #1f1f1f; padding: 23px 25px; border-bottom: 1px solid #e8e8e8; }
 .item-vacancy-cols { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex !important; flex-direction: row; justify-content: space-between; border-bottom: 1px solid #e8e8e8; }
 .item-vacancy-col { width: 50%; border-right: 1px solid #e8e8e8; padding: 23px 25px 13px; }
 .item-vacancy-col:last-child { border-right: none; }
 .item-vacancy__title { font-size: 16px; color: #1f1f1f; font-weight: 500; padding-bottom: 15px; text-shadow: 0 0; }
-.item-vacancy__list { font-size: 14px; color: #4c5055; line-height: 1.45; }
-.item-vacancy__list li { position: relative; padding-left: 15px; padding-bottom: 8px; }
-.item-vacancy__list li:before { content: ""; position: absolute; top: 8px; left: 0; width: 5px; height: 5px; background: #1f1f1f; }
+.item-vacancy ul { font-size: 14px; color: #4c5055; line-height: 1.45; }
+.item-vacancy ul li { position: relative; padding-left: 15px; padding-bottom: 8px; }
+.item-vacancy ul li:before { content: ""; position: absolute; top: 8px; left: 0; width: 5px; height: 5px; background: #1f1f1f; }
 .item-vacancy__bottom { padding: 23px 25px; }
 .item-vacancy__bottom .item-vacancy__title { padding-bottom: 5px; }
-.item-vacancy__text { font-size: 14px; color: #4c5055; line-height: 1.45; }
-.item-vacancy__text a { color: #1f1f1f; }
-.item-vacancy__text a:hover { opacity: 0.8; }
+.item-vacancy a { color: #1f1f1f; }
+.item-vacancy a:hover { opacity: 0.8; }
 
 .form-vacancy { border: none; background: #f7f7f7; }
 .form-vacancy .btn { width: 100%; margin-top: 0; }
