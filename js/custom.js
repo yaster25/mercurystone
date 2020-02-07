@@ -7,6 +7,11 @@ $(window).on('load', function () {
  
 });
 
+$('.js-preloader').preloadinator({
+    minTime: 2000,
+    scroll:true
+});
+
 
 function initSlider() {
     
@@ -56,6 +61,8 @@ function initSlider() {
      
 
  $(document).ready(function(){
+     
+     
      
      $(".js-nav-search").click(function(){        
         $('body').addClass('body-overflow');
@@ -1045,6 +1052,9 @@ function initSlider() {
      if($('#map').length){
          initMap();
      }
+     
+     
+     
 		
  });
 
