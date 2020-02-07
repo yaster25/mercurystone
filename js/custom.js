@@ -6,11 +6,12 @@ $(window).on('load', function () {
 	};
  
 });
-
-$('.js-preloader').preloadinator({
-    minTime: 2000,
-    scroll:true
-});
+ if($('.js-preloader').length){
+    $('.js-preloader').preloadinator({
+        minTime: 2000,
+        scroll:true
+    });
+ }
 
 
 function initSlider() {
