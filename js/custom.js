@@ -409,7 +409,16 @@ function initSlider() {
 				name: "Необходимо заполнить поле «ФИО».",
 				phone: "Необходимо заполнить поле «Телефон».",
 				
-			}
+			},
+         submitHandler: function(){
+                $.fancybox.close();
+                $.fancybox.open({
+                    src  : '#popup-thank-show',
+                    type : 'inline',
+                     touch: false,
+                    
+                });
+            }
 		});
      
      $("#formCall").validate({
@@ -430,8 +439,17 @@ function initSlider() {
 					email: "Введите корректный адрес электронной почты."
                 }
 				
-			}
-		});
+			},
+            submitHandler: function(){
+                $.fancybox.close();
+                $.fancybox.open({
+                    src  : '#popup-thank',
+                    type : 'inline',
+                     touch: false,
+                    
+                });
+            }
+     });
      
      
      $("#formLogin").validate({
@@ -476,7 +494,16 @@ function initSlider() {
 					email: "Введите корректный адрес электронной почты."
                 }
 				
-			}
+			},
+         submitHandler: function(){
+                $.fancybox.close();
+                $.fancybox.open({
+                    src  : '#popup-thank-subscribe',
+                    type : 'inline',
+                     touch: false,
+                    
+                });
+            }
 		});
      
      

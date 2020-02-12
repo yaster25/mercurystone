@@ -1138,9 +1138,21 @@ padding: 0 15px;}
         font-size: 16px;
         line-height: 1.45;
         color: #4c5055;
+        b{
+            color:$color-black;
+                font-weight: 700;
+        }
+        
     }
     &-call{
         max-width: 475px;
+    }
+    &-thank{
+        max-width: 340px;
+        padding: 50px 45px 15px;
+        &-2{
+            max-width: 480px;
+        }
     }
 }
 
@@ -1865,6 +1877,73 @@ body.menu-open{overflow:hidden}
                 }
             }
         
+        }
+        &.prev{
+            .pagination-item__link{
+                    width: 38px;
+                height: 42px;
+                position: relative;
+                margin-right: 50px;
+                display: block;
+                border: none;
+                background: none;
+                &:before{
+                    transition: all 0.2s linear;
+                    content: "";
+                    width: 38px;
+                    height: 14px;
+                    background: no-repeat center center;
+                    background-image: url(../img/icon-arrows-dark.png);
+                        background-position: left center;
+                    opacity: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+        &.next{
+            .pagination-item__link{
+                    width: 38px;
+                height: 42px;
+                position: relative;
+                margin-left: 50px;
+                display: block;
+                border: none;
+                background: none;
+                &:before{
+                    transition: all 0.2s linear;
+                    content: "";
+                    width: 38px;
+                    height: 14px;
+                    background: no-repeat center center;
+                    background-image: url(../img/icon-arrows-dark.png);
+                        background-position: right center;
+                    opacity: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+        &.active{
+            .pagination-item__link{
+                background-color: $color-green;
+                border-color: $color-green;
+                color: #fff;
+            }
         }
     }
 }
@@ -4992,6 +5071,13 @@ ul.tabs{
     }
 }
 
+.icon-ok{
+    background: url('../img/icon-ok.png') no-repeat center;
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 22px;
+        display: block;
+}
 
 @media screen and (max-width: 1140px) {   
    
@@ -6685,6 +6771,13 @@ body.filter-open .main-wrapper{
     .reg-tabs ul.tabs li{
         margin-right: 76px;
     }
+
+    .pagination-item.prev .pagination-item__link{
+        margin-right: 0;
+    }
+    .pagination-item.next .pagination-item__link{
+        margin-left: 0;
+    }
 }
 
 
@@ -7722,3 +7815,6 @@ body.filter-open .main-wrapper{
         transform: translateY(-25px);
 	}
 }
+
+
+
