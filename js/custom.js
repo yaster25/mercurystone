@@ -400,14 +400,19 @@ function initSlider() {
      })
      
      $("#formShow").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+           element.parent().append(error);
+        },
 			rules: {
 				name: "required",
 				phone: "required",
-				
+				time:"required"
 			},
 			messages: {
 				name: "Необходимо заполнить поле «ФИО».",
 				phone: "Необходимо заполнить поле «Телефон».",
+				time: "Заполните поле «Время».",
 				
 			},
          submitHandler: function(){
@@ -422,6 +427,10 @@ function initSlider() {
 		});
      
      $("#formCall").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				name: "required",
 				phone: "required",
@@ -453,6 +462,10 @@ function initSlider() {
      
      
      $("#formLogin").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				
 				password: "required",
@@ -475,7 +488,8 @@ function initSlider() {
      $("#formSubscribe").validate({
          errorElement:'div',
          errorPlacement: function(error, element) {
-            error.insertAfter(element.parent());
+            //error.insertAfter(element.parent());
+             element.parent().append(error);
         },
 			rules: {
 				name: "required",
@@ -791,6 +805,10 @@ function initSlider() {
      }
      
      $("#formPersonal").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				name: "required",
 				password : {
@@ -892,6 +910,10 @@ function initSlider() {
 	})
      
      $("#formCooperation").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				name: "required",
 				phone: "required",
@@ -900,7 +922,8 @@ function initSlider() {
 					email: true
 				},
                 company: "required",
-				
+				file:"required",
+				file2:"required",
 			},
 			messages: {
 				name: "Необходимо заполнить поле «Имя».",
@@ -910,11 +933,17 @@ function initSlider() {
 					email: "Введите корректный адрес электронной почты."
                 },
                 company: "Необходимо заполнить поле «OOO».",
+                file:"Необходимо Прикрепить фото цеха",
+                file2:"Необходимо Прикрепить фото офиса"
 				
 			}
 		});
      
      $("#formStoneOrder").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				name: "required",
 				phone: "required",
@@ -938,6 +967,10 @@ function initSlider() {
 		});
      
      $("#formQuestion").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				name: "required",
 				phone: "required",
@@ -961,6 +994,10 @@ function initSlider() {
 		});
      
      $("#formRegister1").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				name: "required",
 				phone: "required",
@@ -1002,6 +1039,10 @@ function initSlider() {
 		});
      
      $("#formRegister2").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				name: "required",
                 email: {
@@ -1038,6 +1079,10 @@ function initSlider() {
 			}
 		});
      $("#formRegister3").validate({
+         errorElement:'div',
+         errorPlacement: function(error, element) {
+            element.parent().append(error);
+        },
 			rules: {
 				name: "required",
                 email: {

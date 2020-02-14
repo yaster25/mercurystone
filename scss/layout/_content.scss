@@ -1226,7 +1226,7 @@ label.error{
     bottom: 14px;
     color: $color-red;
     display: none;
-    font-size: 14px;
+    font-size: 13px;
     
 }
 
@@ -1235,8 +1235,9 @@ div.error{
     bottom: 14px;
     color: $color-red;
     display: none;
-    font-size: 14px;
+    font-size: 13px;
     width: 100%;
+    white-space: nowrap;
 }
 
 
@@ -3613,7 +3614,7 @@ ul.tabs{
         bottom: 14px;
         color: $color-red;
         display: none;
-        font-size: 14px;
+        font-size: 13px;
 
     }
 
@@ -3622,7 +3623,7 @@ ul.tabs{
         bottom: 14px;
         color: $color-red;
         display: none;
-        font-size: 14px;
+        font-size: 13px;
         width: 100%;
     }
     &__title{
@@ -4646,7 +4647,7 @@ ul.tabs{
             border: none;
         }
         .form__col{
-            padding-bottom: 20px;
+            padding-bottom: 25px;
         }
         .form__col-title {
             padding-bottom: 10px;
@@ -4655,6 +4656,9 @@ ul.tabs{
             width: 100%;
         }
     
+        .form div.error{
+            bottom: 9px;
+        }
     }
 }
 
@@ -6778,6 +6782,10 @@ body.filter-open .main-wrapper{
     .pagination-item.next .pagination-item__link{
         margin-left: 0;
     }
+
+    div.error{
+        bottom: 10px;
+    }
 }
 
 
@@ -7630,6 +7638,10 @@ body.filter-open .main-wrapper{
     }
     .reg-tabs ul.tabs{
         display: none;
+    }
+
+    .popup-form__col-4, .popup-form__col-8{
+        width: 100%;
     }
 }
 
