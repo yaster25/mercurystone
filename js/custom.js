@@ -1126,6 +1126,11 @@ function initSlider() {
          initMap();
      }
      
+     $('.js-all-reviews').on('click', function(event) {
+        $(this).parent().find('.review-item').show();
+         $(this).hide();
+         return false;
+	});	
      
      
 		
