@@ -1456,14 +1456,12 @@ body.menu-open{overflow:hidden}
         top: auto;
         left: auto;
     }
-    .subnav{
-        padding: 0;
-        width: 100%;
-        margin-right: 0;
-    }
+    
     .subnav-item {
         border-bottom: 1px solid #393939;
         padding: 1px 0;
+        width: 100%;
+        margin-right: 0;
         &:last-child{
             border: none;
         }

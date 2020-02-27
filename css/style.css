@@ -917,9 +917,9 @@ body.overflow { overflow: hidden !important; position: fixed; }
 
 .subnav-wrapper { position: absolute; display: none; text-align: left; background: #fff; position: absolute; top: 100%; left: 0; padding: 60px 45px 30px; width: 100%; z-index: 999999; border-top: 1px solid #e8e8e8; }
 
-.subnav { width: 33.33%; display: inline-block; vertical-align: top; margin-right: -4px; padding: 0 15px; }
-.subnav-item { padding-bottom: 30px; }
-.subnav-link { display: inline-block; line-height: inherit; text-transform: none; font-weight: 300; }
+.subnav { white-space: normal; }
+.subnav-item { padding: 0 15px 30px; width: 33.33%; margin-right: -4px; display: inline-block; vertical-align: top; }
+.subnav-link { display: inline-block; line-height: inherit; text-transform: none; font-weight: 300; white-space: nowrap; }
 .subnav-link__img { display: inline-block; width: 80px; height: 80px; position: relative; background: no-repeat center; background-size: cover; vertical-align: middle; position: relative; }
 .subnav-link__img:before { border: 3px solid #759f05; position: absolute; content: ""; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; transition: all 0.2s linear; }
 .subnav-link__img:after { border: 1px solid #fff; position: absolute; content: ""; top: 3px; left: 3px; right: 3px; bottom: 3px; opacity: 0; transition: all 0.2s linear; }
@@ -1321,8 +1321,7 @@ body.menu-open { overflow: hidden; }
 .sidebar-inner .nav-item__link-catalog .icon-catalog-arrow { position: absolute; top: 50%; right: 20px; display: block; margin-top: -4.5px; }
 .sidebar-inner .nav-item__link-catalog.active .icon-catalog-arrow { transform: rotate(180deg); }
 .sidebar-inner .subnav-wrapper { border: none; position: relative; background: transparent; padding: 0px; top: auto; left: auto; }
-.sidebar-inner .subnav { padding: 0; width: 100%; margin-right: 0; }
-.sidebar-inner .subnav-item { border-bottom: 1px solid #393939; padding: 1px 0; }
+.sidebar-inner .subnav-item { border-bottom: 1px solid #393939; padding: 1px 0; width: 100%; margin-right: 0; }
 .sidebar-inner .subnav-item:last-child { border: none; }
 .sidebar-inner .subnav-link__img { width: 52px; height: 52px; }
 .sidebar-inner .subnav-link__name { max-width: calc(100% - 56px); color: rgba(255, 255, 255, 0.3); }
