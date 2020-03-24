@@ -408,6 +408,7 @@ ul {
     
     position: relative; 
     transition: all 0.3s;
+    height: 100%;
     &:after{
         content: "";
         position: absolute;
@@ -1757,6 +1758,13 @@ body.menu-open{overflow:hidden}
 .product-list{
     border-left: 1px solid #e8e8e8;
     margin-bottom: 30px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
     &__col{
         width: 33.33%;
         float: left;
@@ -1776,6 +1784,19 @@ body.menu-open{overflow:hidden}
         }
         
     }
+}
+
+.product-slider .slick-track{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex !important;
+    flex-direction: row;
+}
+.product-slider__slide{
+    height: auto;
+    float: none;
 }
 
 .product-list-banner{

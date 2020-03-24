@@ -221,7 +221,7 @@ function initSlider() {
      
       $(window).on('resize orientationchange', function() {
          
-          $('.product-item').matchHeight();
+          //$('.product-item').matchHeight();
           
         });
      
@@ -259,7 +259,7 @@ function initSlider() {
      
      /*END NEWS SLIDER*/
      
-     $('.product-item').matchHeight();
+     //$('.product-item').matchHeight();
      $('.about-item').matchHeight();
      
      /* NICE INPUT*/
