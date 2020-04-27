@@ -79,7 +79,7 @@ header{
     &-phones{
         color: $color-white;
        
-        font-size: 10px;
+        font-size: 12px;
         a{
             margin-right:25px;
             color: $color-white;
@@ -114,12 +114,12 @@ header{
     }
     &-links{
         border-right: 1px solid #393939;
-            display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex !important;
-    flex-direction: row;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex !important;
+        flex-direction: row;
         &__item{
             display: inline-block;
             vertical-align: middle;
@@ -700,6 +700,10 @@ body.menu-subnav-open{
         display: none;
     }
     
+
+    .header-phones{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 740px) {

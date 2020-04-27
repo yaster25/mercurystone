@@ -98,9 +98,9 @@ function initSlider() {
 		return false;
 	 });
      
-     $('.nav-item-parent2 .nav-item__link').click(function() {	
-		$(this).next('.subnav-wrapper').slideToggle();	
-         $(this).toggleClass('active');
+     $('.nav-item-parent2 .nav-item__link span').click(function() {	
+		$(this).parent('.nav-item__link').next('.subnav-wrapper').slideToggle();	
+         $(this).parent('.nav-item__link').toggleClass('active');
 		event.preventDefault();
         event.stopPropagation();
 		return false;
@@ -654,12 +654,13 @@ function initSlider() {
         });
     });
      
-     
+     // здесь только для наглядности. на сервер преносить не надо
       $('#step-select-1').selectric({
          disableOnMobile: false,
          nativeOnMobile: false,
-         onChange: function() {            
-             $(this).parents('.selectric-wrapper').addClass('selectric-selected');
+         onChange: function() {   
+             window.location.href = "02_коллекция-шаг-2.html";
+             /*$(this).parents('.selectric-wrapper').addClass('selectric-selected');
              $("#step-select-2").prop('selectedIndex', 0).removeAttr("disabled").selectric('refresh');
              $("#step-select-3").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
              $("#step-select-4").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
@@ -673,17 +674,19 @@ function initSlider() {
              
              if($(this).hasClass('step-goback')){
                 window.location.href = "02_коллекция-шаг-1-2-3.html"; 
-             }
+             }*/
              
           },
      });
      
+     // здесь только для наглядности. на сервер преносить не надо
      $('#step-select-2').selectric({
          disableOnMobile: false,
          nativeOnMobile: false,
          onChange: function() {
             //alert('Change');
-             $(this).parents('.selectric-wrapper').addClass('selectric-selected');
+             window.location.href = "02_коллекция-шаг-3.html";
+             /*$(this).parents('.selectric-wrapper').addClass('selectric-selected');
              $("#step-select-3").prop('selectedIndex', 0).removeAttr("disabled").selectric('refresh');
              $("#step-select-4").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
              
@@ -696,10 +699,11 @@ function initSlider() {
              $('.quick-choose-step-2').removeClass('hidden');
              if($(this).hasClass('step-goback')){
                 window.location.href = "02_коллекция-шаг-1-2-3.html"; 
-             }
+             }*/
           },
      });
      
+     // здесь только для наглядности. на сервер преносить не надо
      $('#step-select-3').selectric({
          disableOnMobile: false,
          nativeOnMobile: false,
@@ -710,6 +714,8 @@ function initSlider() {
              window.location.href = "05_стр-товара.html";
           },
      });
+     
+     // здесь только для наглядности. на сервер преносить не надо
      $('#step-select-4').selectric({
          disableOnMobile: false,
          nativeOnMobile: false,
@@ -721,7 +727,7 @@ function initSlider() {
           },
      });
      
-     $('.quick-choose-item').on('click', function(event) {
+     /*$('.quick-choose-item').on('click', function(event) {
          if(!$('.quick-choose-step-1').hasClass('active')){
         
             var type=$(this).attr('data-type');
@@ -741,7 +747,7 @@ function initSlider() {
              return false;
         }
          
-	});
+	});*/
      
      $('.js-quick-choose-more').on('click', function(event) {
          $(this).parents('.quick-choose-step').find('.quick-choose').find('.quick-choose-item').removeClass('hidden');
@@ -752,6 +758,13 @@ function initSlider() {
      
      
      $('.quick-choose-item-2').on('click', function(event) {
+         
+         if(window.innerWidth<992){
+             $('html, body').stop().animate({
+                scrollTop: $('#current-price').offset().top
+            }, 1000);
+         }
+         
         var size=$(this).attr('data-size');
         $('#quick-choose-size .quick-choose-item-2').removeClass('active');
          $(this).addClass('active');
@@ -908,6 +921,16 @@ function initSlider() {
 		$(this).toggleClass('active');
          $(this).next('.faq-item__content').slideToggle();
 	})
+     
+     
+     
+     $('.product-photo_open').on('click', function() {
+            $.fancybox.open( $('[data-fancybox="images-product"]'), {
+                loop : true,
+                infobar : false,
+            });
+            return false;
+        });
      
      $("#formCooperation").validate({
          errorElement:'div',
