@@ -1431,17 +1431,23 @@ body.menu-open{overflow:hidden}
         height: auto;
     }
     .nav-item__link-catalog{
-            text-align: left;
-            margin: 0 -20px;
-            width: auto;
-            display: block;
-            padding: 0 20px;
+        text-align: left;
+        width: auto;
+        background: #222;
+        position: inherit;
+        // margin: 0 -20px; */
+        //display: block;
+        // padding: 0 20px; */            
+        &:after{
+            display: none;
+        }
+        
         .icon-catalog-arrow{
             position: absolute;
-            top: 50%;
-            right: 20px;
+            top: 27px;
+            right: 0px;
             display: block;
-            margin-top: -4.5px;
+            margin-top: 0;
         }
         &.active{
            .icon-catalog-arrow{
@@ -1456,6 +1462,7 @@ body.menu-open{overflow:hidden}
         padding: 0px;
         top: auto;
         left: auto;
+        border-top: 1px solid #393939;
     }
     
     .subnav-item {

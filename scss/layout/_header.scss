@@ -247,7 +247,7 @@ header{
     height: 28px;
 }
 .icon-catalog{
-    background: url('../img/icons.png') no-repeat -163px 0;
+    background: url('../img/icons.png') no-repeat -45px -90px;
     width: 17px;
     height: 12px;
 }
@@ -317,8 +317,8 @@ header{
                 }
             }
             &-catalog{
-                background: $color-green;
-                color: #fff;
+                background: #fff;
+                //color: #fff;
                 width: 190px;
                 text-align: center;
                 &:hover{
