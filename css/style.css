@@ -1352,9 +1352,10 @@ body.menu-open { overflow: hidden; }
 .filter-price__link { min-width: 81px; }
 .filter-price__link.btn_green-black { background: #759f05; color: #fff; border-color: #759f05; }
 
-.aside { width: 260px; background: #f7f7f7; padding: 25px 25px 40px; float: left; }
+.aside { width: 260px; background: #f7f7f7; float: left; }
 .aside__title { font-size: 22px; font-weight: 900; color: #1f1f1f; padding-bottom: 20px; border-bottom: 1px solid #d8dadc; }
 .aside .filter-close { display: none; }
+.aside-inner { background: #f7f7f7; padding: 25px 25px 70px; }
 
 .content-aside { width: calc(100% - 260px); padding-left: 30px; float: left; }
 
@@ -2161,6 +2162,39 @@ ul.tabs li.current:before { width: 100%; }
 .pr-box-info-photo { display: none; }
 .pr-box-info-photo .btn_sm { height: 32px; line-height: 30px; width: 100%; margin-bottom: 20px; font-weight: normal; text-shadow: 0 0; }
 
+.filter-section-search { margin-top: -1px; border: 1px solid #d8dadc; background: #fff; height: 42px; padding: 0 20px 0 40px; position: relative; }
+.filter-section-search:before { content: ""; position: absolute; background: url(../img/icons.png) no-repeat -184px 0; width: 16px; height: 16px; left: 15px; top: 50%; margin-top: -8px; }
+.filter-section-search .filter-input { height: 40px; width: 100%; overflow: hidden; text-overflow: ellipsis; display: block; border: none; background-color: transparent; font-size: 14px; font-weight: 300; font-family: inherit; color: #4c5055; }
+.filter-section-search .filter-input:focus:-moz-placeholder, .filter-section-search .filter-input:focus::-moz-placeholder { opacity: 0; }
+.filter-section-search .filter-input:focus::-ms-input-placeholder, .filter-section-search .filter-input:focus:-ms-input-placeholder { opacity: 0; }
+.filter-section-search .filter-input:focus::-webkit-input-placeholder { opacity: 0; }
+
+.filter-tabs-nav { margin: 0px; padding: 0px; list-style: none; padding-bottom: 17px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex !important; flex-direction: row; justify-content: space-between; align-items: center; margin: 0 -5px; }
+.filter-tabs-nav-link { width: calc(100% - 10px); margin: 0 5px; display: block; cursor: pointer; }
+.filter-tabs-nav-link.current { background: #759f05; color: #fff; border-color: #759f05; }
+
+.filter-tabs-content { display: none; }
+.filter-tabs-content.current { display: block; }
+
+.filter-chars { text-align: center; margin: 0 -3px -7px; }
+
+.filter-section-chars label.checkbox-char { font-size: 16px; color: #4c5055; cursor: pointer; padding: 0 2px; line-height: 16px; margin: 2px 1px; display: inline-block; vertical-align: middle; margin: 7px 1px; }
+.filter-section-chars label.checkbox-char.disabled { opacity: 0.5; cursor: auto; }
+.filter-section-chars label.checkbox-char.active { color: #759f05; font-weight: bold; }
+
+.filter-section .filter-price { margin: 0 -5px 25px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex !important; flex-direction: row; justify-content: space-between; align-items: center; width: auto; padding: 0; }
+.filter-section .filter-price__item { width: calc(33.33% - 10px); display: block; margin: 0 5px; }
+.filter-section .filter-price__link { min-width: 100%; }
+
+#aside-filter { will-change: min-height; }
+#aside-filter .aside-inner { transform: translate(0, 0); transform: translate3d(0, 0, 0); will-change: position, transform; }
+
+.aside-filter-btn { position: fixed; width: 260px; bottom: 0; background: #f7f7f7; z-index: 999; background: -moz-linear-gradient(top, transparent 0%, #f7f7f7 33%, #f7f7f7 100%); background: -webkit-linear-gradient(top, transparent 0%, #f7f7f7 33%, #f7f7f7 100%); background: linear-gradient(to bottom, transparent 0%, #f7f7f7 33%, #f7f7f7 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f7f7f7',GradientType=0 ); padding-top: 10px; padding-bottom: 10px; }
+.aside-filter-btn_relative { position: absolute; bottom: 0; left: 0; }
+.aside-filter-btn_mobile { display: none; }
+
+.content-aside { position: relative; }
+
 @media screen and (max-width: 1140px) { .advantages-item { padding: 10px 15px; }
   .advantages-item__text { padding-left: 15px; }
   .block-country { width: 100%; height: 562px; margin-top: -40px; }
@@ -2295,7 +2329,7 @@ ul.tabs li.current:before { width: 100%; }
   body.filter-open .main-wrapper:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(20, 20, 20, 0.9); z-index: 99990; }
   .filter-close { width: 24px; height: 24px; display: block; opacity: 0.15; background: url("../img/icons.png") no-repeat -86px -30px; position: absolute; right: 20px; top: 25px; z-index: 99; }
   .filter-close:hover { opacity: 0.5; }
-  .aside .filter-close { display: block; }
+  .aside .filter-close { display: block; right: 0; }
   .section-page-product .breadcrumbs { display: none; }
   .product-page-title .title-box { flex-direction: column-reverse; width: 100%; }
   .product-page-title .title-box .title { width: 100%; }
@@ -2391,7 +2425,14 @@ ul.tabs li.current:before { width: 100%; }
   .steps { display: none; }
   .btn-hide-tablet { display: none; }
   .product-btn-back { display: block; text-align: center; padding-bottom: 30px; }
-  .product-btn-back .btn { width: 200px; } }
+  .product-btn-back .btn { width: 200px; }
+  .filter-section-color > label { width: 48px; padding-top: 46px; }
+  .aside-filter-btn_desktop { display: none; }
+  .aside-filter-btn_mobile { display: block; position: absolute; BOTTOM: 0; top: auto; z-index: 99999; position: -webkit-sticky; position: sticky; width: auto; max-width: 360px; padding-top: 10px; left: -20px; margin: 0 -20px; }
+  .aside { padding-bottom: 0; }
+  .aside-inner { padding: 0; padding-bottom: 30px; }
+  .filter-body { padding-top: 20px; }
+  .filter-section-chars label.checkbox-char { margin: 7px 5px; } }
 @media screen and (max-width: 740px) { .wrapper { padding: 0 20px; }
   .section-top { height: auto; padding-bottom: 20px; }
   .section { padding-top: 45px; padding-bottom: 50px; }

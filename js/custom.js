@@ -609,6 +609,16 @@ function initSlider() {
          $(this).next('.tab-content__content').slideToggle();
 	})
      
+     $('.filter-tabs-nav-link').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.filter-tabs-nav-link').removeClass('current');
+		$(this).parents('.filter-tabs').find('.filter-tabs-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+     
      /*gallery slider*/
      $('.js-gallery-slider').each(function () {
           $(this).slick({
@@ -816,6 +826,45 @@ function initSlider() {
      if($('.aside-sticky').length){         
          var sticky = new Sticky('.aside-sticky');
      }
+     if($('#aside-filter').length){       
+        
+         var asidefilter = document.getElementById('aside-filter');
+         
+          var stickySidebar = new StickySidebar('#aside-filter', {
+            topSpacing: 20,
+            bottomSpacing: 20,
+            containerSelector: '.section-aside',
+            innerWrapperSelector: '.aside-inner'
+          });
+        
+         asidefilter.addEventListener('affixed.container-bottom.stickySidebar', function (event) {
+            console.log('add');
+             $('.aside-filter-btn').addClass('aside-filter-btn_relative');
+        });
+                 
+        var scrollPos = 0;
+        window.addEventListener('scroll', function(){
+            if ((document.body.getBoundingClientRect()).top > scrollPos){
+                tt=$('.section-aside').offset().top;
+                tt2= tt + $('.section-aside').height() - $(window).innerHeight();
+                if (Math.abs(scrollPos) >= tt && Math.abs(scrollPos) <= tt2) {
+                    $('.aside-filter-btn').removeClass('aside-filter-btn_relative');
+                }
+            }
+            else {            
+                tt=$('.section-aside').offset().top;
+                tt2= tt + $('.section-aside').height() - $(window).innerHeight();
+                if (Math.abs(scrollPos) > tt2) {
+                    $('.aside-filter-btn').addClass('aside-filter-btn_relative');
+                }
+            }
+            
+            scrollPos = (document.body.getBoundingClientRect()).top;
+        });
+         
+         
+     }
+     
      
      $("#formPersonal").validate({
          errorElement:'div',
