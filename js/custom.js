@@ -541,11 +541,15 @@ function initSlider() {
             $('body').removeClass('filter-open');
             $('.aside-inner').removeClass('aside-active');					
         }
+        if($('body').hasClass('filter-currency-open')){ 
+            $('body').removeClass('filter-currency-open');
+            $('.filter-price').removeClass('filter-price-active');					
+        }
         return false;        
 	});
      
      $(document).bind("click touchstart",function(event) {
-        if ($(event.target).closest(".aside, .js-filter-mobile").length) return;
+        if ($(event.target).closest(".aside, .js-filter-mobile, .aside-filter-price").length) return;
         if($('body').hasClass('filter-open')){  
             $('body').removeClass('filter-open');
             $('.aside-inner').removeClass('aside-active');	
@@ -574,7 +578,7 @@ function initSlider() {
 	});
      
      $(document).bind("click touchstart",function(event) {
-        if ($(event.target).closest(".filter-price, .js-currency-mobile").length) return;
+        if ($(event.target).closest(".filter-price, .js-currency-mobile, .aside-filter-price").length) return;
         if($('body').hasClass('filter-currency-open')){  
             $('body').removeClass('filter-currency-open');
             $('.filter-price').removeClass('filter-price-active');	

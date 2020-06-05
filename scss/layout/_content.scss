@@ -2209,19 +2209,19 @@ body.menu-open{overflow:hidden}
         border-color: $color-green;
     }
     .selectric-items li{
-        color: $color-green;
+        
+        color: $color-black;
     }
     .selectric-items li.selected{
-        color: $color-black;
+        color: $color-green;
         background: transparent;
     }
     .selectric-items li.highlighted{
-        color: $color-black;
+        color: $color-green;
         background: transparent;
     }
     .selectric-items li:hover{
-        color: $color-black;
-        background: transparent;
+        background: #f7f7f7;
     }
     &.selectric-selected{
         .selectric{
@@ -5324,10 +5324,10 @@ ul.tabs{
     bottom: 0;
     background: #f7f7f7;
     z-index: 999;
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(247,247,247,1) 33%, rgba(247,247,247,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(247,247,247,1) 33%,rgba(247,247,247,1) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(247,247,247,1) 33%,rgba(247,247,247,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f7f7f7',GradientType=0 );
+    background: -moz-linear-gradient(top, rgba(247,247,247,0) 0%, rgba(247,247,247,1) 33%, rgba(247,247,247,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(247,247,247,0) 0%,rgba(247,247,247,1) 33%,rgba(247,247,247,1) 100%);
+    background: linear-gradient(to bottom, rgba(247,247,247,0) 0%,rgba(247,247,247,1) 33%,rgba(247,247,247,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 );
     padding-top: 10px;
     padding-bottom: 10px;
     &_relative{
