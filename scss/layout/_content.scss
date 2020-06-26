@@ -1116,7 +1116,6 @@ padding: 0 15px;}
     display: none;
 }
 
-
 .popup{
     background: #fff;
     width: 100%;
@@ -1143,7 +1142,9 @@ padding: 0 15px;}
             color:$color-black;
                 font-weight: 700;
         }
-        
+        a{
+            color:$color-green;
+        }        
     }
     &-call{
         max-width: 475px;
@@ -1530,9 +1531,8 @@ body.menu-open{overflow:hidden}
     justify-content: space-between;
     margin-bottom: 30px;
     &__count{
-        font-size: 14px;
+        font-size: 16px;
         color: $color-grey;
-        opacity: 0.5;
         font-weight: 300;
         padding-left: 30px;
     padding-bottom: 8px;
@@ -3325,7 +3325,11 @@ ul.tabs{
 
 .section-cart { }
 .section-cart__content { width: calc(100% - 260px); float: left; padding-right: 30px; }
-.section-cart__aside { width: 260px; float: left; background: #f7f7f7; padding: 0px 25px 20px; }
+.section-cart__aside { width: 260px; float: left;  
+    .btn{
+        width: 100%;
+    }
+}
 
 .cart-total-box { border-bottom: 1px solid #d8dadc; padding: 25px 0 0; font-size: 14px; color: #afafaf; }
 
@@ -5344,6 +5348,20 @@ ul.tabs{
     position: relative;
 }
 
+.subnav__btn{
+    border-top: 1px solid #e8e8e8;
+    margin: 0 15px 0px 15px;
+    padding-top: 30px;
+    line-height: 1;
+}
+
+.cart-aside-box{
+    background: #f7f7f7;
+    padding: 0px 25px 20px;
+    margin-bottom: 30px;
+}
+
+
 
 @media screen and (max-width: 1140px) {   
    
@@ -6773,11 +6791,7 @@ body.filter-open .main-wrapper{
     }
   
 
-    .section-cart__aside {
-            width: calc(100% + 40px);
-        margin: 0 -20px;
-        padding: 0 20px;
-    }
+   
 
     .section-personal-col{
         width: 100%;
@@ -7135,6 +7149,11 @@ body.filter-open .main-wrapper{
     .pr-box-info-photo{
         display: block;
             width: 50%;
+    }
+    
+    .cart-aside-box{
+        margin: 0 -20px 30px;
+        padding: 0 20px 20px;
     }
 }
 
@@ -8189,6 +8208,3 @@ body.filter-open .main-wrapper{
         transform: translateY(-25px);
 	}
 }
-
-
-

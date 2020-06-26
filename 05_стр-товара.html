@@ -273,8 +273,8 @@
                                     <div class="pr-box-info-btns__col-1">
                                         <div class="pr-box-compare">
                                             <div class="custom-checkbox-dark">
-                                                <label for="pr-compare">
-                                                    <input id="pr-compare" type="checkbox" value="value1" name="pr-compare" checked>
+                                                <label for="pr-compare" class="js-compare">
+                                                    <input id="pr-compare" type="checkbox" value="value1" name="pr-compare">
                                                     <span class="custom-checkbox-dark__label">Сравнить</span>   
                                                 </label>
                                             </div>
@@ -363,14 +363,14 @@
                                     <div class="steps__select">
                                         <select class=" select-steps"  id="step-select-4" name="size">
                                             <option value="">Выберите размер</option>
-                                            <option value="1">1600x1150x20 &nbsp;&nbsp; 3шт &nbsp;&nbsp; 45.25м2</option>
-                                            <option value="2">1800x1200x20 &nbsp;&nbsp; 2шт &nbsp;&nbsp; 5.25м2</option>
-                                            <option value="3">1600x1150x20 &nbsp;&nbsp; 5шт &nbsp;&nbsp; 15.25м2</option>
-                                            <option value="4">1800x1200x20 &nbsp;&nbsp; 2шт &nbsp;&nbsp; 25.25м2</option>
-                                            <option value="5">1600x1150x20 &nbsp;&nbsp; 3шт &nbsp;&nbsp; 5.25м2</option>
-                                            <option value="6">1800x1200x20 &nbsp;&nbsp; 2шт &nbsp;&nbsp; 7.25м2</option>
-                                            <option value="7">1600x1150x20 &nbsp;&nbsp; 3шт &nbsp;&nbsp; 5.25м2</option>
-                                            <option value="8">1800x1200x20 &nbsp;&nbsp; 2шт &nbsp;&nbsp; 7.25м2</option>
+                                            <option value="1">1600x1150x20 / 3шт / 45.25м2</option>
+                                            <option value="2">1800x1200x20 / 2шт / 5.25м2</option>
+                                            <option value="3">1600x1150x20 / 5шт / 15.25м2</option>
+                                            <option value="4">1800x1200x20 / 2шт / 25.25м2</option>
+                                            <option value="5">1600x1150x20 / 3шт / 5.25м2</option>
+                                            <option value="6">1800x1200x20 / 2шт / 7.25м2</option>
+                                            <option value="7">1600x1150x20 / 3шт / 5.25м2</option>
+                                            <option value="8">1800x1200x20 / 2шт / 7.25м2</option>
                                         </select>
                                     </div>
                                 </div>
@@ -573,8 +573,8 @@
                                     <div class="pr-box-info-btns__col-1">
                                         <div class="pr-box-compare">
                                             <div class="custom-checkbox-dark">
-                                                <label for="pr-compare-2">
-                                                    <input id="pr-compare-2" type="checkbox" value="value1" name="pr-compare" checked>
+                                                <label for="pr-compare-2"  class="js-compare">
+                                                    <input id="pr-compare-2" type="checkbox" value="value1" name="pr-compare">
                                                     <span class="custom-checkbox-dark__label">Сравнить</span>   
                                                 </label>
                                             </div>
@@ -1631,7 +1631,6 @@
                                                 <span class="subnav-link__name">Мрамор</span>
                                             </a>
                                         </li>
-                                    
                                         <li class="subnav-item">
                                             <a href="" class="subnav-link">
                                                 <span class="subnav-link__img" style="background-image: url('img/image-stone-05.png')"></span>
@@ -1656,23 +1655,17 @@
                                                 <span class="subnav-link__name">Известняк</span>
                                             </a>
                                         </li>
-                                    
                                         <li class="subnav-item">
                                             <a href="" class="subnav-link">
                                                 <span class="subnav-link__img" style="background-image: url('img/image-stone-09.png')"></span>
                                                 <span class="subnav-link__name">Полудрагаценные камни</span>
                                             </a>
-                                        </li>
-                                        <li class="subnav-item">
-                                            <a href="" class="subnav-link">
-                                                <span class="subnav-link__img" style="background-image: url('img/image-stone-10.png')"></span>
-                                                <span class="subnav-link__name">Каталог камня</span>
-                                            </a>
-                                        </li>
-                                        
+                                        </li>                                        
                                     </ul>
                                     
-                                    
+                                    <div class="subnav__btn">
+                                        <a href="#" class="btn btn_black-border btn_sm">Все товары</a>
+                                    </div>
                                     
                                 </div>
                             </li>
@@ -1920,6 +1913,14 @@
                 <span class="icon-ok"></span>
                 <b>Товар добавлен в корзину.</b><br><br>
                 <a href="#" class="btn btn_green-black">перейти в корзину</a>
+            </div>
+        </div>
+       
+       <div class="popup popup-thank" id="popup-compare">
+            <div class="popup__text">
+                <span class="icon-ok"></span>
+                <b>Товар успешно добавлен в<br>
+                    <a href="#">“Сравнение”</a></b>
             </div>
         </div>
     </div>

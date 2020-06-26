@@ -84,15 +84,20 @@ function initSlider() {
      
      
      $('.nav-item-parent').hover(function() {		
-		$(this).find('.subnav-wrapper').stop(true, false, true).slideDown(300);	
-         $('body').addClass('menu-subnav-open');
+		$(this).find('.subnav-wrapper').stop(true, false, true).delay(1000).slideDown(300);	
+
+         $("body").delay(900).queue(function(next) {
+              $(this).addClass('menu-subnav-open');
+              next();
+        });
+         
 		event.preventDefault();
         event.stopPropagation();
 		return false;
          
 	 }, function() {		
 		$(this).find('.subnav-wrapper').stop(true, false, true).slideUp(300);
-          $('body').removeClass('menu-subnav-open');
+          $('body').stop(true, false, true).removeClass('menu-subnav-open');
 		 event.preventDefault();
          event.stopPropagation();		
 		return false;
@@ -1205,6 +1210,25 @@ function initSlider() {
      $('.js-all-reviews').on('click', function(event) {
         $(this).parent().find('.review-item').show();
          $(this).hide();
+         return false;
+	});	
+     
+     $('.js-compare').on('click', function(event) {
+         
+         if(!$('.js-compare input[type="checkbox"]').attr("checked")){
+             $('.js-compare  input[type="checkbox"]').each(function () { //loop through each checkbox
+                $(this).prop("checked", true);
+             });
+             $.fancybox.open({
+                src  : '#popup-compare',
+                type : 'inline',
+            });
+         }else{           
+              $('.js-compare  input[type="checkbox"]').each(function () { //loop through each checkbox
+                   $(this).prop("checked", false);
+            });  
+         }
+        
          return false;
 	});	
      
