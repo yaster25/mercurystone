@@ -1239,7 +1239,7 @@ ul { list-style: none; }
 .popup__title { font-size: 34px; padding-bottom: 13px; font-weight: 900; color: #1f1f1f; }
 .popup__text { text-align: center; padding-bottom: 30px; font-size: 16px; line-height: 1.45; color: #4c5055; }
 .popup__text b { color: #1f1f1f; font-weight: 700; }
-.popup__text a { color: #759f05; }
+.popup__text .link { color: #759f05; }
 .popup-call { max-width: 475px; }
 .popup-thank { max-width: 340px; padding: 50px 45px 15px; }
 .popup-thank-2 { max-width: 480px; }
