@@ -396,13 +396,27 @@ function initSlider() {
         }
 	});
      
+    if($('.filter-section-color').length){
+         $('.filter-section-color').each(function(){
+             var l=$(this).find('.checkbox-color.active').length;
+             if(l>0) $(this).addClass('filter-section-color_active');
+             else $(this).removeClass('filter-section-color_active');
+         })
+     }    
+     
      $(".filter-item").on("change", function (e) {
         var filterItem = $(this),
             label = filterItem.parent("label");
             
         label.toggleClass("active");
+         
+         var l=$(this).parents('.filter-section-color').find('.checkbox-color.active').length;
+         if(l>0) $(this).parents('.filter-section-color').addClass('filter-section-color_active');
+         else $(this).parents('.filter-section-color').removeClass('filter-section-color_active');
 
-     })
+    })
+     
+     
      
      $("#formShow").validate({
          errorElement:'div',
@@ -673,68 +687,53 @@ function initSlider() {
         });
     });
      
-     // здесь только для наглядности. на сервер преносить не надо
+     
       $('#step-select-1').selectric({
          disableOnMobile: false,
          nativeOnMobile: false,
          onChange: function() {   
              window.location.href = "02_коллекция-шаг-2.html";
-             /*$(this).parents('.selectric-wrapper').addClass('selectric-selected');
-             $("#step-select-2").prop('selectedIndex', 0).removeAttr("disabled").selectric('refresh');
-             $("#step-select-3").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
-             $("#step-select-4").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
-             
-             var type=$(this).val();
-             $('#quick-choose-type .quick-choose-item').show();
-             $('#quick-choose-type .quick-choose-item:not([data-type="'+type+'"])').hide();
-             
-             $('.quick-choose-step-1').removeClass('active');
-             $('.quick-choose-step-2').addClass('hidden');
-             
-             if($(this).hasClass('step-goback')){
-                window.location.href = "02_коллекция-шаг-1-2-3.html"; 
-             }*/
-             
+          },
+          onInit: function() {
+              if($(this).val()<1){
+                  $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Тип изделия</i>');
+              }
+              
           },
      });
      
-     // здесь только для наглядности. на сервер преносить не надо
+
      $('#step-select-2').selectric({
          disableOnMobile: false,
          nativeOnMobile: false,
          onChange: function() {
-            //alert('Change');
-             window.location.href = "02_коллекция-шаг-3.html";
-             /*$(this).parents('.selectric-wrapper').addClass('selectric-selected');
-             $("#step-select-3").prop('selectedIndex', 0).removeAttr("disabled").selectric('refresh');
-             $("#step-select-4").prop('selectedIndex', 0).prop("disabled", "disabled").selectric('refresh');
-             
-             var type=$("#step-select-1").val();
-             var depth=$(this).val();             
-             
-             $('#quick-choose-type .quick-choose-item[data-type="'+type+'"]').show();
-             $('#quick-choose-type .quick-choose-item:not([data-depth="'+depth+'"])').hide();
-             $('.quick-choose-step-1').addClass('active');
-             $('.quick-choose-step-2').removeClass('hidden');
-             if($(this).hasClass('step-goback')){
-                window.location.href = "02_коллекция-шаг-1-2-3.html"; 
-             }*/
+             window.location.href = "02_коллекция-шаг-3.html";             
+          },
+         onInit: function() {
+              if($(this).val()<1){
+                  $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Толщина</i>');
+              }
+              
           },
      });
      
-     // здесь только для наглядности. на сервер преносить не надо
+     
      $('#step-select-3').selectric({
          disableOnMobile: false,
          nativeOnMobile: false,
          onChange: function() {
-            //alert('Change');
              $(this).parents('.selectric-wrapper').addClass('selectric-selected');
-             //$('.form-steps-collection').submit();
              window.location.href = "05_стр-товара.html";
+          },
+         onInit: function() {
+              if($(this).val()<1){
+                  $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Партия</i>');
+              }
+              
           },
      });
      
-     // здесь только для наглядности. на сервер преносить не надо
+     
      $('#step-select-4').selectric({
          disableOnMobile: false,
          nativeOnMobile: false,
@@ -743,6 +742,16 @@ function initSlider() {
              var size=$(this).val();          
              $('#quick-choose-size .quick-choose-item-2').removeClass('active');
              $('#quick-choose-size .quick-choose-item-2[data-size="'+size+'"]').addClass('active');
+             
+             if(size<1){
+                 $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Размер</i>');
+             }
+          },
+          onInit: function() {
+              if($(this).val()<1){
+                  $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Размер</i>');
+              }
+              
           },
      });
      
@@ -1283,6 +1292,21 @@ function initSlider() {
                 }
               ]
         });
+     
+    $(document).on('change keydown paste input','.header-search__input',function(){ 
+        if($(this).val().length>1){
+            $(this).parents('.header-search').find('.search-hints').slideDown();
+        }
+        else{
+            $(this).parents('.header-search').find('.search-hints').slideUp();
+        }   
+    });    
+    
+    $(document).bind("click touchstart",function(event) {
+        if ($(event.target).closest(".header-search, .search-hints").length) return;
+         $('.search-hints').hide();
+        event.stopPropagation();
+      });
      
 		
  });
