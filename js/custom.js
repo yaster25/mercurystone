@@ -394,6 +394,7 @@ function initSlider() {
             $(this).parents('.filter-section').removeClass('active');
             $(this).next('.filter-section-content').slideUp();
         }
+         stickySidebar.updateSticky();
 	});
      
     if($('.filter-section-color').length){
@@ -852,29 +853,44 @@ function initSlider() {
             topSpacing: 20,
             bottomSpacing: 20,
             containerSelector: '.section-aside',
-            innerWrapperSelector: '.aside-inner'
+            innerWrapperSelector: '.aside-inner',
+              minWidth: 991
           });
         
          asidefilter.addEventListener('affixed.container-bottom.stickySidebar', function (event) {
-            console.log('add');
              $('.aside-filter-btn').addClass('aside-filter-btn_relative');
         });
+        
                  
         var scrollPos = 0;
         window.addEventListener('scroll', function(){
+            var dd=(document.body.getBoundingClientRect()).top;
             if ((document.body.getBoundingClientRect()).top > scrollPos){
                 tt=$('.section-aside').offset().top;
                 tt2= tt + $('.section-aside').height() - $(window).innerHeight();
                 if (Math.abs(scrollPos) >= tt && Math.abs(scrollPos) <= tt2) {
                     $('.aside-filter-btn').removeClass('aside-filter-btn_relative');
                 }
+                
+               if (Math.abs(scrollPos) >= tt + $('.section-aside').height()-70 || Math.abs(scrollPos) < tt) {
+                     $('.aside-filter-title').removeClass('aside-filter-title_fixed');
+                }
+                if (Math.abs(scrollPos) >= tt && Math.abs(scrollPos)< tt + $('.section-aside').height() -70) {
+                     $('.aside-filter-title').addClass('aside-filter-title_fixed');
+                }
             }
             else {            
                 tt=$('.section-aside').offset().top;
                 tt2= tt + $('.section-aside').height() - $(window).innerHeight();
                 if (Math.abs(scrollPos) > tt2) {
-                    $('.aside-filter-btn').addClass('aside-filter-btn_relative');
+                    $('.aside-filter-btn').addClass('aside-filter-btn_relative');                    
+                }                
+                if (Math.abs(scrollPos) >= tt && Math.abs(scrollPos)<tt2-70) {
+                     $('.aside-filter-title').addClass('aside-filter-title_fixed');
                 }
+               if (Math.abs(scrollPos) >= tt + $('.section-aside').height()-70 || Math.abs(scrollPos) < tt) {
+                     $('.aside-filter-title').removeClass('aside-filter-title_fixed');
+                } 
             }
             
             scrollPos = (document.body.getBoundingClientRect()).top;
@@ -1308,7 +1324,46 @@ function initSlider() {
         event.stopPropagation();
       });
      
-		
+     $('.sort-list__link').on('click', function(event) {
+        if($(this).hasClass('active')){           
+            $(this).toggleClass('sort-asc');
+            $(this).toggleClass('sort-desc');            
+        }else{
+            $('.sort-list__link').removeClass('active');
+            $(this).addClass('active');
+        }
+         return false;
+	});	
+     
+     /* mobile currency*/
+    $('.js-sort-mobile').on('click', function(event) {
+        if(!$('body').hasClass('filter-sort-open')){
+            event.preventDefault();		
+            $('body').addClass('filter-sort-open');
+            $('.filter-sort').addClass('filter-price-active');
+        }
+	});	
+
+	$('.js-filter-sort-close').on('click', function(event) {        
+        if($('body').hasClass('filter-sort-open')){ 
+            $('body').removeClass('filter-sort-open');
+            $('.filter-sort').removeClass('filter-price-active');					
+        }
+        return false;        
+	});
+     
+     $(document).bind("click touchstart",function(event) {
+        if ($(event.target).closest(".filter-sort, .js-sort-mobile, .aside-filter-sort").length) return;
+        if($('body').hasClass('filter-sort-open')){  
+            $('body').removeClass('filter-sort-open');
+            $('.filter-sort').removeClass('filter-price-active');	
+        }
+         event.stopPropagation();
+      });
+     
+    /* mobile currency*/
+     
+     
  });
 
 

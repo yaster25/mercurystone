@@ -189,28 +189,28 @@
                                     <button class="header-search__btn">найти</button>
                                     <ul class="search-hints">
                                         <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Азул Имперадор</a>
+                                            <a href="#" class="search-hints__link"><img src="img/image-product-01.png" alt=""> Азул Имперадор</a>
                                         </li>
                                         <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Азул Империале</a>
+                                            <a href="#" class="search-hints__link"><img src="img/image-product-02.png" alt="">Азул Империале</a>
                                         </li>
                                         <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Барджилио Империале</a>
+                                            <a href="#" class="search-hints__link"><img src="img/image-product-03.png" alt="">Барджилио Империале</a>
                                         </li>
                                         <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Дарк Классико</a>
+                                            <a href="#" class="search-hints__link"><img src="img/image-product-04.png" alt="">Имперадор Дарк Классико</a>
                                         </li>
                                         <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Дарк Стандарт</a>
+                                            <a href="#" class="search-hints__link"><img src="img/image-product-01.png" alt="">Имперадор Дарк Стандарт</a>
                                         </li>
                                         <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Дарк Чайна</a>
+                                            <a href="#" class="search-hints__link"><img src="img/image-product-02.png" alt="">Имперадор Дарк Чайна</a>
                                         </li>
                                         <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Дарк Экстра</a>
+                                            <a href="#" class="search-hints__link"><img src="img/image-product-03.png" alt="">Имперадор Дарк Экстра</a>
                                         </li>
                                         <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Лайт</a>
+                                            <a href="#" class="search-hints__link"><img src="img/image-product-04.png" alt="">Имперадор Лайт</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -240,8 +240,39 @@
                         <div class="mobile-filter-btn">
                             <a href="#" class="btn btn_black-border btn_sm js-filter-mobile">фильтр</a>
                         </div>
+                        <div class="mobile-sort-btn">
+                            <a href="#" class="btn btn_black-border btn_sm js-sort-mobile">сортировка</a>
+                        </div>
                         <div class="mobile-currency-btn">
                             <a href="#" class="btn btn_black-border btn_sm js-currency-mobile">валюта</a>
+                        </div>
+                        <div class="aside-filter-sort">
+                             <a href="#" class="filter-close js-filter-sort-close"></a>
+                                <div class="filter-price__title">Сортировка</div>
+                                <ul class="filter-sort">
+                                    <li class="filter-price__item">
+                                        <a href="#" class="filter-price__link btn btn_black-border btn_green-black btn_sm">По убыванию цены</a>
+                                    </li>
+                                    <li class="filter-price__item">
+                                        <a href="#" class="filter-price__link btn btn_black-border btn_sm">По возрастанию цены</a>
+                                    </li>
+                                    <li class="filter-price__item">
+                                        <a href="#" class="filter-price__link btn btn_black-border btn_sm">По алфавиту от А до Я</a>
+                                    </li>
+                                    <li class="filter-price__item">
+                                        <a href="#" class="filter-price__link btn btn_black-border btn_sm">По алфавиту от Я до А</a>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="block-sort">
+                            <ul class="sort-list">
+                                <li class="sort-list__item">
+                                    <a href="#" class="sort-list__link sort-asc">Сортировать по Цене: </a>
+                                </li>
+                                <li  class="sort-list__item">
+                                    <a href="#" class="sort-list__link sort-desc">Сортировать по Алфавиту: </a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="aside-filter-price">
                             <a href="#" class="filter-close js-filter-close"></a>
@@ -264,14 +295,22 @@
                 <div class="section-aside clearfix">
                     <div class="aside-filter-btn aside-filter-btn_desktop">
                         <div class="filter-btn">
-                            <a href="#" class="btn btn_black-border btn_sm">сбросить фильтр</a>
+                            <a href="#" class="btn btn_green btn_sm">применить фильтр</a>
                         </div>
                     </div> 
-                    <div class="aside" id="aside-filter">                        
+                    <div class="aside-filter-title aside-filter-title_desktop">
+                        <div class="aside__title">Фильтр <a href="#" class="aside__title-btn">сбросить</a></div>
+                    </div> 
+                    <div class="aside" id="aside-filter">       
+                        <div class="aside-title-mobile">
+                            <a href="#" class="filter-close js-filter-close"></a>
+                            <div class="aside__title">Фильтр <a href="#" class="aside__title-btn">сбросить фильтр</a></div>
+                        </div>
+                        
                         <div class="aside-inner">                            
                            
                             <a href="#" class="filter-close js-filter-close"></a>
-                            <div class="aside__title">Фильтр</div>
+                            <div class="aside__title">Фильтр <a href="#" class="aside__title-btn">сбросить</a></div>
 
                             <div class="filter-body">
                                 
@@ -1020,7 +1059,7 @@
                         </div>
                         <div class="aside-filter-btn aside-filter-btn_mobile">
                             <div class="filter-btn">
-                                <a href="#" class="btn btn_black-border btn_sm">сбросить фильтр</a>
+                                <a href="#" class="btn btn_green btn_sm">применить фильтр</a>
                             </div>
                         </div> 
                         
@@ -2055,39 +2094,7 @@
 
                 </div>
             </div>
-            
-              <div class="header-search clearfix">
-                    <input type="text" name="s" placeholder="Поиск по сайту" class="header-search__input">
-                    <button class="header-search__btn-icon"></button>
-                    <ul class="search-hints">
-                                        <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Азул Имперадор</a>
-                                        </li>
-                                        <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Азул Империале</a>
-                                        </li>
-                                        <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Барджилио Империале</a>
-                                        </li>
-                                        <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Дарк Классико</a>
-                                        </li>
-                                        <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Дарк Стандарт</a>
-                                        </li>
-                                        <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Дарк Чайна</a>
-                                        </li>
-                                        <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Дарк Экстра</a>
-                                        </li>
-                                        <li class="search-hints__item">
-                                            <a href="#" class="search-hints__link">Имперадор Лайт</a>
-                                        </li>
-                                    </ul>
-                </div>
-              
-             <div class="header-nav">
+              <div class="header-nav">
                  <div class="wrapper">
                         <ul class="nav">                            
                             <li class="nav-item nav-item-parent2">
