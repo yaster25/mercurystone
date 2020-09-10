@@ -6900,7 +6900,7 @@ body.filter-open .main-wrapper{
         right: 0;
         background: #222;
         height: 69px;
-        z-index: 9999;
+        z-index: 999999;
     }
     .aside-inner{
         .aside__title{
@@ -6912,12 +6912,12 @@ body.filter-open .main-wrapper{
     }
     .aside-inner.aside-active {
         display: block;
-        top: 80px;
-        height: calc(100vh - 80px);
+        top: 0px;
+        height: 100vh;
         overflow: auto;
         margin: 0 -20px;
         width: calc(100% + 40px);
-        padding: 0 20px;
+        padding: 80px 20px;
     }
     .aside__title-btn{
         color: #fff;
