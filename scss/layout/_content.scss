@@ -398,7 +398,6 @@ ul {
     border-right: 1px solid #e8e8e8;
     &__slide{
         border: 1px solid #e8e8e8;  
-        border-left: 0;
     }
 }
 
@@ -1777,11 +1776,7 @@ body.menu-open{overflow:hidden}
 
 .price-range{    padding-top: 6px;    padding-bottom: 6px;}
 
-////
-
 .product-list{
-    
-    //margin-bottom: 30px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1793,15 +1788,13 @@ body.menu-open{overflow:hidden}
         width: 33.33%;
         float: left;
         border: 1px solid #e8e8e8;
-        border-left: 0;
         margin-bottom: 30px;
         &:nth-child(3n+1){
             clear: both;
             border-left: 1px solid #e8e8e8;
         }
         &-full{
-            width: 100%;
-            
+            width: 100%;            
         }
         &-banner{
             border: none;
@@ -5137,6 +5130,7 @@ ul.tabs{
 .reg-tabs{
     max-width: 420px;
     margin: 0 auto;
+    padding-top: 20px;
     ul.tabs{
         display: -webkit-box;
         display: -moz-box;
@@ -5434,6 +5428,16 @@ ul.tabs{
 }
 
 .pr-part{
+    &__toggle{
+        position: absolute;
+        right: 45px;
+        .t-show{
+            display: block;
+        }
+        .t-hide{
+            display: none;
+        }
+    }
     &__title{
         background: #f7f7f7;
         border: 1px solid #e8e8e8;
@@ -5454,6 +5458,14 @@ ul.tabs{
             &:before{
                 -webkit-transform: rotate(180deg);
                 transform: rotate(180deg);
+            }
+            .pr-part__toggle{
+                .t-show{
+                     display: none;
+                }
+                .t-hide{
+                    display: block;
+                }
             }
         }
     }
@@ -8165,10 +8177,7 @@ body.filter-open .main-wrapper{
             }
         }
     }
-    .tab-content__content{
-        display: none;
-        padding: 30px 20px;
-    }
+   
     ul.tabs{
         display: none;
     }
@@ -8607,7 +8616,6 @@ body.filter-open .main-wrapper{
     }
     .reg-tabs{
         max-width: 100%;
-        padding-top: 0;
     }
     .reg-tabs ul.tabs{
         display: none;
