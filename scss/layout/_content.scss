@@ -2327,6 +2327,9 @@ body.menu-open{overflow:hidden}
 }
 
 .quick-choose{
+    &.slick-slider{
+        display: block;
+    }
     &-item{
         border: 1px solid #e8e8e8;
          display: -webkit-box;
