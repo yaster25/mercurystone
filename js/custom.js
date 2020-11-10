@@ -214,8 +214,8 @@ function initSlider() {
                 {
                   breakpoint: 640,
                   settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     appendArrows: $(this).parents('.slider-wrapper').find('.slider-arrows-m'),
                   }
                 }
@@ -548,7 +548,7 @@ function initSlider() {
      }
      
      /* mobile filter*/
-    $('.js-filter-mobile').on('click', function(event) {
+    /*$('.js-filter-mobile').on('click', function(event) {
         if(!$('body').hasClass('filter-open')){
             event.preventDefault();		
             $('body').addClass('filter-open');
@@ -576,7 +576,7 @@ function initSlider() {
         }
          event.stopPropagation();
       });
-     
+     */
     /* mobile filter*/
      
      

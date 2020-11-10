@@ -53,6 +53,7 @@
                                 <a href="#popup-auth" class="header-link has-hint" data-fancybox>
                                     <span class="icon-img icon-user"></span>
                                     <div class="hint-content">личный кабинет</div>
+                                    <div class="header-link__title">Войти</div>
                                 </a>
                             </li>                        
                             <li class="header-links__item">
@@ -60,6 +61,7 @@
                                     <span class="icon-img icon-watch"></span>
                                     <span class="header-link__num">1</span>
                                     <div class="hint-content">Сравнение</div>
+                                    <div class="header-link__title">Сравнить</div>
                                 </a>
                             </li>
                             <li class="header-links__item">
@@ -67,6 +69,7 @@
                                     <span class="icon-img icon-star"></span>
                                     <span class="header-link__num">5</span>
                                     <div class="hint-content">Избранное</div>
+                                    <div class="header-link__title">Избранное</div>
                                 </a>
                             </li>
                             <li class="header-links__item header-links__cart">
@@ -77,6 +80,7 @@
                                         сумма
                                         <span>8 955 $</span>
                                     </span>
+                                    <div class="header-link__title">Корзина</div>
                                 </a>
 
                             </li>
@@ -239,16 +243,73 @@
                     <div class="title-box">
                         <div class="title"><span>Мрамор</span> Крема Марфил Классико / Crema Marfil Classico</div>
                         
-                        <a href="#" class="btn btn_black-border btn_sm btn-hide-m">назад</a>
+                        <div class="title-box__btns">
+                            <a href="#" class="btn btn_green btn_sm"><span class="icon-catalog icon-catalog-white"></span>в каталог</a>  
+                            <a href="#" class="btn btn_black-border btn_sm"><span class="icon-back"></span>назад</a>                              
+                        </div>
                     </div>
                 </div>
                 
                 <div class="section-product clearfix">
                     
-                   <div class="product-btn-back">
-                        <a href="02_%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-%D1%88%D0%B0%D0%B3-3.html" class="btn btn_black-border btn_sm">шаг назад</a> 
-                       <a href="#" class="btn btn_green btn_sm">в каталог</a>  
-                    </div>
+                   <div class="steps clearfix">
+                        <div class="pr-label">Пошаговый выбор</div>
+                            <form action="05_стр-товара.html" method="get" id="form-steps"  class="form-steps-collection">
+                                <div class="steps-col">
+                                    <div class="steps__label">Шаг 1 <span>Тип изделия</span></div>
+                                    <div class="steps__select">
+                                        <select class="select-steps selected"  id="step-select-1" name="type">
+                                            <option value="" disabled >Выберите - Тип изделия</option>
+                                            <option value="1" selected>Слэб</option>
+                                            <option value="2">Плитка</option>
+                                            <option value="3">Мозаика</option>
+                                            <option value="4">Блок</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="steps-col">
+                                    <div class="steps__label">Шаг 2 <span>Толщина</span></div>
+                                    <div class="steps__select">
+                                        <select class="select-steps selected"   id="step-select-2" name="depth">
+                                            <option value="" disabled>Выберите - Толщина</option>
+                                            <option value="20" selected>20mm</option>
+                                            <option value="30">30mm</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="steps-col">
+                                    <div class="steps__label">Шаг 3 <span>Партия</span></div>
+                                    <div class="steps__select">
+                                        <select class="select-steps selected"  id="step-select-3" name="part">
+                                            <option value="" disabled>Выберите - Партия</option>
+                                            <option value="1" selected >Партия ГТ - 50.76м2</option>
+                                            <option value="2">Партия ГЗ - 50.76м2</option>
+                                            <option value="3">Партия ГУ - 50.76м2</option>
+                                            <option value="4">Партия ГЧ - 50.76м2</option>
+                                            <option value="5">Партия ГЭ - 50.76м2</option>
+                                            <option value="6">Партия ГЭ2 - 50.76м2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="steps-col">
+                                    <div class="steps__label">Шаг 4 <span>Размер</span></div>
+                                    <div class="steps__select">
+                                        <select class=" select-steps"  id="step-select-4" name="size">
+                                            <option value="">Выберите - Размер</option>
+                                            <option value="1">1600x1150x20 / 3шт / 45.25м2</option>
+                                            <option value="2">1800x1200x20 / 2шт / 5.25м2</option>
+                                            <option value="3">1600x1150x20 / 5шт / 15.25м2</option>
+                                            <option value="4">1800x1200x20 / 2шт / 25.25м2</option>
+                                            <option value="5">1600x1150x20 / 3шт / 5.25м2</option>
+                                            <option value="6">1800x1200x20 / 2шт / 7.25м2</option>
+                                            <option value="7">1600x1150x20 / 3шт / 5.25м2</option>
+                                            <option value="8">1800x1200x20 / 2шт / 7.25м2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    
                     
                     <div class="section-product__left">
                         <div class="product-single-gallery slick-white js-product-single-gallery">
@@ -343,63 +404,7 @@
                         
                     </div>
                     <div class="section-product__right">
-                         <div class="steps clearfix">
-                            <form action="05_стр-товара.html" method="get" id="form-steps"  class="form-steps-collection">
-                                <div class="steps-col">
-                                    <div class="steps__label">Шаг 1 <span>Тип изделия</span></div>
-                                    <div class="steps__select">
-                                        <select class="select-steps selected"  id="step-select-1" name="type">
-                                            <option value="" disabled >Выберите - Тип изделия</option>
-                                            <option value="1" selected>Слэб</option>
-                                            <option value="2">Плитка</option>
-                                            <option value="3">Мозаика</option>
-                                            <option value="4">Блок</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="steps-col">
-                                    <div class="steps__label">Шаг 2 <span>Толщина</span></div>
-                                    <div class="steps__select">
-                                        <select class="select-steps selected"   id="step-select-2" name="depth">
-                                            <option value="" disabled>Выберите - Толщина</option>
-                                            <option value="20" selected>20mm</option>
-                                            <option value="30">30mm</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="steps-col">
-                                    <div class="steps__label">Шаг 3 <span>Партия</span></div>
-                                    <div class="steps__select">
-                                        <select class="select-steps selected"  id="step-select-3" name="part">
-                                            <option value="" disabled>Выберите - Партия</option>
-                                            <option value="1" selected >Партия ГТ - 50.76м2</option>
-                                            <option value="2">Партия ГЗ - 50.76м2</option>
-                                            <option value="3">Партия ГУ - 50.76м2</option>
-                                            <option value="4">Партия ГЧ - 50.76м2</option>
-                                            <option value="5">Партия ГЭ - 50.76м2</option>
-                                            <option value="6">Партия ГЭ2 - 50.76м2</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="steps-col">
-                                    <div class="steps__label">Шаг 4 <span>Размер</span></div>
-                                    <div class="steps__select">
-                                        <select class=" select-steps"  id="step-select-4" name="size">
-                                            <option value="">Выберите - Размер</option>
-                                            <option value="1">1600x1150x20 / 3шт / 45.25м2</option>
-                                            <option value="2">1800x1200x20 / 2шт / 5.25м2</option>
-                                            <option value="3">1600x1150x20 / 5шт / 15.25м2</option>
-                                            <option value="4">1800x1200x20 / 2шт / 25.25м2</option>
-                                            <option value="5">1600x1150x20 / 3шт / 5.25м2</option>
-                                            <option value="6">1800x1200x20 / 2шт / 7.25м2</option>
-                                            <option value="7">1600x1150x20 / 3шт / 5.25м2</option>
-                                            <option value="8">1800x1200x20 / 2шт / 7.25м2</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        
+                         
                         <div class="pr-cols pr-part-box">
                             <div class="pr-cols__col pr-cols__col-full">                                
                                 <div class="pr-part">
@@ -1478,6 +1483,7 @@
                                 <a href="#popup-auth" class="header-link has-hint" data-fancybox>
                                     <span class="icon-img icon-user"></span>
                                     <div class="hint-content">личный кабинет</div>
+                                    <div class="header-link__title">Войти</div>
                                 </a>
                             </li>                        
                             <li class="header-links__item">
@@ -1485,6 +1491,7 @@
                                     <span class="icon-img icon-watch"></span>
                                     <span class="header-link__num">1</span>
                                     <div class="hint-content">Сравнение</div>
+                                    <div class="header-link__title">Сравнить</div>
                                 </a>
                             </li>
                             <li class="header-links__item">
@@ -1492,6 +1499,7 @@
                                     <span class="icon-img icon-star"></span>
                                     <span class="header-link__num">5</span>
                                     <div class="hint-content">Избранное</div>
+                                    <div class="header-link__title">Избранное</div>
                                 </a>
                             </li>
                         </ul>

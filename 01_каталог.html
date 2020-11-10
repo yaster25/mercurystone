@@ -53,6 +53,7 @@
                                 <a href="#popup-auth" class="header-link has-hint" data-fancybox>
                                     <span class="icon-img icon-user"></span>
                                     <div class="hint-content">личный кабинет</div>
+                                    <div class="header-link__title">Войти</div>
                                 </a>
                             </li>                        
                             <li class="header-links__item">
@@ -60,6 +61,7 @@
                                     <span class="icon-img icon-watch"></span>
                                     <span class="header-link__num">1</span>
                                     <div class="hint-content">Сравнение</div>
+                                    <div class="header-link__title">Сравнить</div>
                                 </a>
                             </li>
                             <li class="header-links__item">
@@ -67,6 +69,7 @@
                                     <span class="icon-img icon-star"></span>
                                     <span class="header-link__num">5</span>
                                     <div class="hint-content">Избранное</div>
+                                    <div class="header-link__title">Избранное</div>
                                 </a>
                             </li>
                             <li class="header-links__item header-links__cart">
@@ -77,6 +80,7 @@
                                         сумма
                                         <span>8 955 $</span>
                                     </span>
+                                    <div class="header-link__title">Корзина</div>
                                 </a>
 
                             </li>
@@ -237,16 +241,24 @@
                         <div class="catalog-title__count">365 товаров</div>
                     </div>
                     <div class="block-filter">
-                        <div class="mobile-filter-btn">
-                            <a href="#" class="btn btn_black-border btn_sm js-filter-mobile">фильтр</a>
+                        <div class="mobile-filter-title">
+                            <div>
+                                <a href="#" class="js-filter-close"><span class="icon-filter"></span>скрыть фильтр</a>
+                                <span class="mobile-filter-title__hr"></span>
+                                <a href="#" class="aside__title-btn">сбросить фильтр</a>
+                            </div>
+                            <a href="#" class="filter-close js-filter-close"></a>
                         </div>
-                        <div class="mobile-sort-btn">
+                        <div class="mobile-filter-btn">
+                            <a href="#" class="btn btn_black-border btn_sm js-filter-mobile-new"><span class="icon-filter"></span>фильтр</a>
+                        </div>
+                        <!--<div class="mobile-sort-btn">
                             <a href="#" class="btn btn_black-border btn_sm js-sort-mobile">сортировка</a>
                         </div>
                         <div class="mobile-currency-btn">
                             <a href="#" class="btn btn_black-border btn_sm js-currency-mobile">валюта</a>
-                        </div>
-                        <div class="aside-filter-sort">
+                        </div>-->
+                        <!--<div class="aside-filter-sort">
                              <a href="#" class="filter-close js-filter-sort-close"></a>
                                 <div class="filter-price__title">Сортировка</div>
                                 <ul class="filter-sort">
@@ -263,20 +275,33 @@
                                         <a href="#" class="filter-price__link btn btn_black-border btn_sm">По алфавиту от Я до А</a>
                                     </li>
                                 </ul>
-                        </div>
+                        </div>-->
                         <div class="block-sort">
-                            <ul class="sort-list">
-                                <li class="sort-list__item">
-                                    <a href="#" class="sort-list__link sort-asc">Сортировать по Цене: </a>
-                                </li>
-                                <li  class="sort-list__item">
-                                    <a href="#" class="sort-list__link sort-desc">Сортировать по Алфавиту: </a>
-                                </li>
-                            </ul>
+                            <div class="pr-sort">
+                                            <div class="pr-sort__title">
+                                                <span class="icon-sort icon-sort-desc">По цене</span>
+                                            </div>
+                                            <div class="pr-sort__content">
+                                                <ul class="pr-sort-list">
+                                                    <li>
+                                                        <a href="#" class="active"><span class="icon-sort icon-sort-desc">По цене</span></a> 
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><span class="icon-sort icon-sort-asc">По цене</span></a> 
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><span class="icon-sort icon-sort-desc">По алфавиту</span></a> 
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><span class="icon-sort icon-sort-asc">По алфавиту</span></a> 
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                         </div>
                         <div class="aside-filter-price">
-                            <a href="#" class="filter-close js-filter-close"></a>
-                            <div class="filter-price__title">Валюта</div>
+                            <!--<a href="#" class="filter-close js-filter-close"></a>
+                            <div class="filter-price__title">Валюта</div>-->
                             <ul class="filter-price">
                                 <li class="filter-price__item">
                                     <a href="#" class="filter-price__link btn btn_black-border btn_green-black btn_sm">RUB</a>
@@ -299,10 +324,10 @@
                         </div>
                     </div> 
                     <div class="aside" id="aside-filter">       
-                        <div class="aside-title-mobile">
+                        <!--<div class="aside-title-mobile">
                             <a href="#" class="filter-close js-filter-close"></a>
                             <div class="aside__title">Фильтр <a href="#" class="aside__title-btn">сбросить фильтр</a></div>
-                        </div>
+                        </div>-->
                         
                         <div class="aside-inner">                            
                            
@@ -1054,11 +1079,11 @@
                             </div>
                             
                         </div>
-                        <div class="aside-filter-btn aside-filter-btn_mobile">
+                        <!--<div class="aside-filter-btn aside-filter-btn_mobile">
                             <div class="filter-btn">
                                 <a href="#" class="btn btn_green btn_sm">применить фильтр</a>
                             </div>
-                        </div> 
+                        </div> -->
                         
                     </div>
                     
@@ -2069,6 +2094,7 @@
                                 <a href="#popup-auth" class="header-link has-hint" data-fancybox>
                                     <span class="icon-img icon-user"></span>
                                     <div class="hint-content">личный кабинет</div>
+                                    <div class="header-link__title">Войти</div>
                                 </a>
                             </li>                        
                             <li class="header-links__item">
@@ -2076,6 +2102,7 @@
                                     <span class="icon-img icon-watch"></span>
                                     <span class="header-link__num">1</span>
                                     <div class="hint-content">Сравнение</div>
+                                    <div class="header-link__title">Сравнить</div>
                                 </a>
                             </li>
                             <li class="header-links__item">
@@ -2083,6 +2110,7 @@
                                     <span class="icon-img icon-star"></span>
                                     <span class="header-link__num">5</span>
                                     <div class="hint-content">Избранное</div>
+                                    <div class="header-link__title">Избранное</div>
                                 </a>
                             </li>
                         </ul>
@@ -2426,6 +2454,7 @@
     <script src="js/ResizeSensor.js"></script>    
     <script src="js/sticky-sidebar.js"></script>    
     <script src="js/custom.js"></script>
+    <script src="js/custom-2.js"></script>
 </body>
 
 </html>

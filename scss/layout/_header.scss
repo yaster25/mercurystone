@@ -154,11 +154,10 @@ header{
         text-align: center;
         &__num{
             position: absolute;
-            top: 50%;
+            top: 5px;
             right: 0px;
             width: 22px;
             height: 22px;
-            margin-top: -11px;
             background: #df4e49;
             color: #fff;
             font-weight: 500;
@@ -171,21 +170,27 @@ header{
         .icon-img{
             transition: all 0.3s;
             position: relative;
+            margin-top: 4px;
         }
         .icon-watch{
-            margin-right: 0px;
+            margin-right: 8px;
             & + .header-link__num{
                 right: -13px;
+                left: 50%;
             }
             .header-link__num{
                 right: -10px;
             }
         }
         .icon-star{
-            margin-right: 0px;
+               margin-right: 12px;
             & + .header-link__num{
                 right: -13px;
+                left: 50%;
             }
+        }
+        .icon-cart{
+            margin-top: 0;
         }
         
         &:hover{
@@ -292,8 +297,8 @@ header{
 }
 .icon-watch{
    
-    width: 31px;
-    height: 18px;
+    width: 19px;
+    height: 24px;
     
     &:before{
         content: "";
@@ -302,7 +307,7 @@ header{
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../img/icons.png') no-repeat -69px 0;
+        background: url('../img/icons.png') no-repeat -115px -115px;
         transition: $default-transition;
         opacity: 1;        
     }
@@ -313,7 +318,7 @@ header{
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../img/icons.png') no-repeat -26px -115px;
+        background: url('../img/icons.png') no-repeat -136px -115px;
         transition: $default-transition;
         opacity: 0;        
     }
