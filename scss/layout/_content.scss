@@ -9613,3 +9613,27 @@ ul.tabs{
         padding: 20px 20px;
     }
 }
+
+@media screen and (max-width: 479px){
+    .mobile-filter-btn{
+        width:30%;
+    }
+    .block-sort{
+        width: 36.66%;
+    }
+    .block-sort .icon-sort {
+        padding-left: 27px;
+    }
+    
+}
+@media screen and (max-width: 479px){
+    .block-sort .pr-sort__title .icon-sort {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 23px;
+    }
+    .icon-sort:before{
+        transform: scale(0.75);
+    }
+}
