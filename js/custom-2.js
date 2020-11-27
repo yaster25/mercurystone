@@ -13,6 +13,12 @@
         return false;
     });
      
+     $(document).bind("click touchstart",function(event) {
+        if ($(event.target).closest(".pr-sort__title, .pr-sort").length) return;
+        $(".pr-sort__title").removeClass('active');     
+        $('.pr-sort__content').slideUp();   
+         event.stopPropagation();
+      });
      
      /* mobile filter*/
      

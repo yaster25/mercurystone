@@ -9414,6 +9414,7 @@ ul.tabs{
             top: 50%;
             margin-top: -2.5px;
             right: 15px;
+            transition: all 0.2s;
         }
         &:hover{
             border-color: $color-green;
@@ -9421,7 +9422,7 @@ ul.tabs{
         &.active{
             border-color: $color-green;
             &:after{
-                transform: rotate(180deg);
+                transform: rotate(-180deg);
             }
         }
         .icon-sort{
@@ -9635,5 +9636,16 @@ ul.tabs{
     }
     .icon-sort:before{
         transform: scale(0.75);
+    }
+}
+.selectric{
+    .button:after{
+        transition: all 0.2s;
+    }
+}
+.selectric-open{
+    
+    .button:after{
+        transform: rotate(-180deg);
     }
 }
