@@ -2515,6 +2515,8 @@ ul.tabs li.current:before { width: 100%; }
   .filter-close:hover { opacity: 1; }
   .content-aside, .section-aside { transition: all 0.4s; left: 0; }
   body.filter-open .aside { display: block; width: 300px; position: absolute; top: 0; left: -330px; }
+  body.filter-open .content-aside { touch-action: none; pointer-events: none; }
+  body.filter-open .content-aside * { touch-action: none; pointer-events: none; }
   body.filter-open .section-aside { left: 330px; }
   body.filter-open .aside-title-mobile { display: none; }
   .aside-inner { padding: 25px 25px 30px; }
@@ -2617,6 +2619,7 @@ ul.tabs li.current:before { width: 100%; }
   .product-btn-back { display: block; text-align: center; padding-bottom: 30px; display: flex; justify-content: space-between; max-width: 360px; margin-left: auto; margin-right: auto; }
   .product-btn-back .btn { width: calc(50% - 5px); }
   .filter-section-color > label { width: 48px; padding-top: 46px; }
+  .filter-section-color > label.active { padding-top: 44px; }
   .aside-filter-btn_desktop { display: none; }
   .aside-filter-btn_mobile { display: block; position: absolute; BOTTOM: 0; top: auto; z-index: 99999; position: -webkit-sticky; position: sticky; width: auto; max-width: 360px; padding-top: 10px; left: -20px; margin: 0 -20px; display: none; }
   .aside-filter-btn_mobile .btn { min-width: 220px; }
@@ -2736,7 +2739,7 @@ ul.tabs li.current:before { width: 100%; }
   .banner-register__text { padding-bottom: 50px; }
   .breadcrumbs { display: none; }
   .catalog-title__count { padding-bottom: 2px; }
-  .product-list-banner { margin: 0 -20px 30px; }
+  .product-list-banner { margin: 0 0px 30px; }
   .pagination-item__link-prev { margin-right: 0; }
   .pagination-item__link-next { margin-left: 0; }
   .pagination-item__link { width: 38px; padding: 0 5px; display: block; height: 38px; line-height: 36px; }
@@ -2851,7 +2854,11 @@ margin-bottom: 25px;*/ }
   .section-product .section-product-top .filter-price { display: block; width: calc(100% + 4px); max-width: inherit; padding: 0; margin: 0 0 0 -4px; }
   .quick-choose-item_part .quick-choose-item__col-2 { width: 33.33%; }
   .quick-choose-item_part .quick-choose-item__col-2:nth-child(2) { border: none; }
-  .quick-choose-item_part .quick-choose-item__col-1 { width: 100%; border-bottom: 1px solid #e8e8e8; } }
+  .quick-choose-item_part .quick-choose-item__col-1 { width: 100%; border-bottom: 1px solid #e8e8e8; }
+  body.filter-open .aside { display: block; width: 220px; position: absolute; top: 0; left: -250px; }
+  body.filter-open .section-aside { left: 250px; }
+  body.filter-open .section-aside { left: 250px; }
+  .aside-inner { padding: 25px 10px 30px; } }
 @media screen and (max-width: 639px) { .btn-hide-m { display: none; }
   .slider-nav_hide-m { display: none; }
   .product-slider { border: none; }
@@ -3046,7 +3053,7 @@ margin-bottom: 25px;*/ }
   .product-item__name { font-size: 14px; margin-bottom: 5px; }
   .product-item-info { padding-bottom: 2px; padding-top: 2px; font-size: 12px; }
   .product-item-info__value { font-size: 11px; margin-top: -2px; }
-  body.filter-open .section-aside { left: 310px; }
+  body.filter-open .section-aside { left: 230px; }
   .quick-choose-item__col { font-size: 13px; }
   .section-product-top .product-single__img { margin: 0 15px 0 0; }
   .section-personal-col .product-list__col { width: 100%; } }
@@ -3207,3 +3214,12 @@ margin-bottom: 25px;*/ }
 .selectric .button:after { transition: all 0.2s; }
 
 .selectric-open .button:after { transform: rotate(-180deg); }
+
+.fancybox-content .button-prev, .fancybox-content .button-next, .fancybox-content .button-close { position: absolute; background: rgba(0, 0, 0, 0.3); width: 40px; height: 40px; color: #fff; z-index: 9999; display: flex; justify-content: center; align-items: center; text-decoration: none; }
+.fancybox-content .button-prev:hover, .fancybox-content .button-next:hover, .fancybox-content .button-close:hover { background: rgba(0, 0, 0, 0.8); }
+.fancybox-content .button-prev svg, .fancybox-content .button-next svg, .fancybox-content .button-close svg { width: 24px; height: 24px; fill: #fff; }
+.fancybox-content .button-next { right: 0; top: 50%; margin-top: calc(-40px/2); }
+.fancybox-content .button-next.active, .fancybox-content .button-next:hover { opacity: 0.4; background: rgba(0, 0, 0, 0.3); }
+.fancybox-content .button-prev { left: 0; top: 50%; margin-top: calc(-40px/2); }
+.fancybox-content .button-prev.active, .fancybox-content .button-prev:hover { opacity: 0.4; background: rgba(0, 0, 0, 0.3); }
+.fancybox-content .button-close { position: absolute; right: -50px; top: -50px; }

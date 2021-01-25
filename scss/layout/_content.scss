@@ -6598,10 +6598,16 @@ ul.tabs{
             left: -330px;
         }
         .content-aside{
-            
+            touch-action:none;
+            pointer-events: none;
+            * {
+                touch-action:none;
+                pointer-events: none;
+            }
         }
         .section-aside{
             left: 330px;
+             
         }
         .aside-title-mobile{
             display: none;
@@ -7054,6 +7060,9 @@ ul.tabs{
     .filter-section-color > label{
         width: 48px;
         padding-top: 46px;
+        &.active{
+            padding-top: 44px;
+        }
     }
     
 
@@ -7719,7 +7728,7 @@ ul.tabs{
     }
     
     .product-list-banner {
-        margin: 0 -20px 30px;
+        margin: 0 0px 30px;
     }
     .pagination-item__link-prev{
         margin-right: 0;
@@ -8243,6 +8252,28 @@ ul.tabs{
             border-bottom: 1px solid #e8e8e8;
     }
     
+    body.filter-open{
+        .aside{
+            display: block;
+            width: 220px;
+            position: absolute;
+            top: 0;
+            left: -250px;
+        }
+       
+        .section-aside{
+            left: 250px;
+        }
+       
+    }
+    body.filter-open .section-aside {
+        left: 250px;
+    }
+    
+
+    .aside-inner {
+        padding: 25px 10px 30px;
+    }
 }
 
 
@@ -9168,7 +9199,7 @@ ul.tabs{
         margin-top: -2px;
     }
     body.filter-open .section-aside {
-        left: 310px;
+        left: 230px;
     }
 
     .quick-choose-item__col{
@@ -9903,4 +9934,56 @@ ul.tabs{
     .button:after{
         transform: rotate(-180deg);
     }
+}
+
+$btnSize: 40px;
+$btnPos: -50px;
+$btnBg: rgba(0, 0, 0, 0.3);
+$btnHover: rgba(0, 0, 0, 0.8);
+.fancybox-content {
+  .button-prev,
+  .button-next,
+  .button-close {
+    position: absolute;
+    background: $btnBg;
+    width: $btnSize;
+    height: $btnSize;
+    color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    &:hover {
+      background: $btnHover;
+    }
+      svg{
+          width:24px;
+          height: 24px;
+          fill:#fff;
+      }
+  }
+  .button-next {
+    right: 0;
+    top: 50%;
+    margin-top: calc(-#{$btnSize}/2);
+     &.active,&:hover {
+      opacity: 0.4;
+       background:$btnBg;
+    }
+  }
+  .button-prev {
+    left: 0;
+    top: 50%;
+    margin-top: calc(-#{$btnSize}/2);
+    &.active,&:hover {
+      opacity: 0.4;
+             background:$btnBg;
+    }
+  }
+  .button-close {
+    position: absolute;
+    right: $btnPos;
+    top: $btnPos;
+  }
 }

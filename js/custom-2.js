@@ -40,15 +40,36 @@
         return false;        
 	});
      
-     $(document).bind("click touchstart",function(event) {
+     $(document).bind("click",function(event) {
+
+         
         if ($(event.target).closest(".aside, .js-filter-mobile-new, .aside-filter-price, .mobile-filter-title").length) return;
         if($('body').hasClass('filter-open')){  
+            event.preventDefault();
             $('body').removeClass('filter-open');
             $('.aside-inner').removeClass('aside-active');	
+            //event.preventDefault();
+            event.stopPropagation();
+            return false;
         }
          event.stopPropagation();
       });
      
     /* mobile filter*/
+     
+     
+     $('[data-fancybox="images-product"]').fancybox({
+      //infobar : false,
+      //buttons : false,
+         arrows:false,
+        
+      afterLoad : function( instance, current ) {
+        if ( instance.group.length > 1 && current.$content ) {
+          current.$content.append('<a data-fancybox-next class="button-next" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.4 12.97l-2.68 2.72 1.34 1.38L19 12l-4.94-5.07-1.34 1.38 2.68 2.72H5v1.94z"></path></svg></a> <a data-fancybox-prev class="button-prev" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.28 15.7l-1.34 1.37L5 12l4.94-5.07 1.34 1.38-2.68 2.72H19v1.94H8.6z"></path></svg></a>');
+        }
+
+        //current.$content.append('<a data-fancybox-close class="button-close" href="javascript:;">×</a>');
+      }
+    })
      
  });
