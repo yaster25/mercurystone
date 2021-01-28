@@ -9439,6 +9439,8 @@ ul.tabs{
     margin-top: 1px;
     padding-top: 24px;
     padding-bottom: 24px;
+    max-height: calc(100vh - 200px);
+    overflow: auto;
 }
 .search-hints__link { display: block; padding: 5px 30px; background: #fff; color: $color-grey; font-size: 16px; line-height: 20px; font-weight: 300; text-transform: none;
     display: flex;
@@ -9554,6 +9556,10 @@ ul.tabs{
         padding-right: 20px;
     }
     
+
+    .search-hints{
+        max-height: inherit;
+    }
 }
     
 @media screen and (max-width: 639px) {
