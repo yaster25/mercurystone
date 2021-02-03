@@ -1614,7 +1614,7 @@ body.menu-open { overflow: hidden; }
 .quick-choose-item_part .quick-choose-item__info-name { width: 100%; padding: 4px 0; }
 .quick-choose-item_part .quick-choose-item__info-val { width: 100%; padding: 4px 0; }
 
-.quick-choose-btn { position: absolute; right: 0; bottom: -30px; }
+.quick-choose-btn { text-align: right; }
 
 .pr-share { color: #4c5055; MARGIN-BOTTOM: 30px; }
 .pr-share span { display: inline-block; vertical-align: middle; margin-right: 25px; }

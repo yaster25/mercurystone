@@ -2665,9 +2665,7 @@ body.menu-open{overflow:hidden}
 }
 
 .quick-choose-btn{
-    position: absolute;
-    right: 0;
-    bottom: -30px;
+    text-align: right;
 }
 
 .pr-share{
@@ -9518,6 +9516,8 @@ ul.tabs{
         }
     }
 }
+
+
 
 @media screen and (max-width: 1140px) {
     .no-vacancy{
