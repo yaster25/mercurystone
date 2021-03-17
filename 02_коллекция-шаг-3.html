@@ -257,56 +257,6 @@
                 
                 <div class="section-product clearfix">
                     
-                    <div class="steps clearfix">
-                        <div class="pr-label">Пошаговый выбор</div>
-                            <form action="05_стр-товара.html" method="get" id="form-steps" class="form-steps-collection">
-                                <div class="steps-col">
-                                    <div class="steps__label">Шаг 1 <span>Тип изделия</span></div>
-                                    <div class="steps__select">
-                                        <select class="select-steps selected"  id="step-select-1" name="type">
-                                            <option value="" disabled>Выберите - Тип изделия</option>
-                                            <option value="1" selected>Слэб</option>
-                                            <option value="2">Плитка</option>
-                                            <option value="3">Мозаика</option>
-                                            <option value="4">Блок</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="steps-col">
-                                    <div class="steps__label">Шаг 2 <span>Толщина</span></div>
-                                    <div class="steps__select">
-                                        <select class="select-steps selected"   id="step-select-2" name="depth">
-                                            <option value="" disabled>Выберите - Толщина</option>
-                                            <option value="20" selected>20mm</option>
-                                            <option value="30">30mm</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="steps-col">
-                                    <div class="steps__label">Шаг 3 <span>Партия</span></div>
-                                    <div class="steps__select">
-                                        <select class="select-steps"  id="step-select-3" name="part">
-                                            <option value="" selected disabled>Выберите - Партия</option>
-                                            <option value="1">Партия ГТ - 50.76м2</option>
-                                            <option value="2">Партия ГЗ - 50.76м2</option>
-                                            <option value="3">Партия ГУ - 50.76м2</option>
-                                            <option value="4">Партия ГЧ - 50.76м2</option>
-                                            <option value="5">Партия ГЭ - 50.76м2</option>
-                                            <option value="6">Партия ГЭ2 - 50.76м2</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="steps-col">
-                                    <div class="steps__label">Шаг 4 <span>Размер</span></div>
-                                    <div class="steps__select">
-                                        <select class=" select-steps"  id="step-select-4" disabled>
-                                            <option value="">Выберите - Размер </option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    
                     <div class="section-product-top">
                         <div class="section-product-top__left">
                             <div class="product-single__img">
@@ -350,15 +300,98 @@
                         </div>
                     </div>
                     
+                    
+                    <div class="product-page-filter">
+                        <div class="product-page-filter__title">
+                            <div class="product-page-filter__icon"></div>
+                            <a href="#" class="product-page-filter__remove">сбросить фильтр </a>
+                        </div>
+                        <div class="product-page-filter__content">
+                            <div class="steps clearfix">
+                                    <form action="05_стр-товара.html" method="get" id="form-steps" class="form-steps-collection">
+                                        <div class="steps-col">
+                                            <div class="steps__select">
+                                                <select class="select-steps selected"  id="step-select-1" name="type">
+                                                    <option value="" disabled>Тип изделия</option>
+                                                    <option value="1" selected>Слэб</option>
+                                                    <option value="2">Плитка</option>
+                                                    <option value="3">Мозаика</option>
+                                                    <option value="4">Блок</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="steps-col">
+                                            <div class="steps__select">
+                                                <select class="select-steps selected"   id="step-select-2" name="depth">
+                                                    <option value="" disabled>Толщина</option>
+                                                    <option value="20" selected>20mm</option>
+                                                    <option value="30">30mm</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="steps-col">
+                                            <div class="steps__select">
+                                                <select class="select-steps"  id="step-select-3" name="part">
+                                                    <option value="" selected disabled>Партия</option>
+                                                    <option value="1">Партия ГТ - 50.76м2</option>
+                                                    <option value="2">Партия ГЗ - 50.76м2</option>
+                                                    <option value="3">Партия ГУ - 50.76м2</option>
+                                                    <option value="4">Партия ГЧ - 50.76м2</option>
+                                                    <option value="5">Партия ГЭ - 50.76м2</option>
+                                                    <option value="6">Партия ГЭ2 - 50.76м2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="steps-col">
+                                            <div class="steps__select">
+                                                <select class=" select-steps"  id="step-select-4" disabled>
+                                                    <option value="">Размер </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            <div class="pr-sort">
+                                <div class="pr-sort__title">
+                                    <span class="icon-sort icon-sort-desc">Сортировать по </span>
+                                </div>
+                                <div class="pr-sort__content">
+                                    <ul class="pr-sort-list">
+                                        <li>
+                                            <a href="#" class="active"><span class="icon-sort icon-sort-asc">Цена по возрастанию</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-desc">Цена по убыванию</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-asc">Алфавит от А-Я</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-desc">Алфавит от Я-А</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-asc">м<span class="text-super">2</span> по возрастанию</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-desc">м<span class="text-super">2</span> по убыванию</span></a> 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="section-product-main">
                         
-                        <div class="product-btn-back">
+                        <!--<div class="product-btn-back">
                             <a href="#" class="btn btn_black-border btn_sm"><span class="icon-back"></span>шаг назад</a> 
                             <a href="#" class="btn btn_black-border btn_sm"><span class="icon-catalog"></span>в каталог</a> 
                             
-                        </div>
+                        </div>-->
                         
-                         <div class="quick-choose-step quick-choose-step-1 active">
+                        <div class="quick-choose-step quick-choose-step-1 active">
                             <div class="pr-cols">                            
                             <div class="pr-cols__col pr-cols__col-full">     
                                     <div class="quick-choose" id="quick-choose-type">
@@ -375,50 +408,821 @@
                                                 <div class="quick-choose-item__col--title">В наличии:</div>
                                                     1224.48 м<span class="text-super">2</span> / 341 шт
                                             </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-sm-hidden">
+                                                <div class="quick-choose-item__col--title">В резерве:</div>
+                                                    1224.48 м<span class="text-super">2</span> / 341 шт
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-sm-hidden">
+                                                <div class="quick-choose-item__col--title">Доступно:</div>
+                                                    1224.48 м<span class="text-super">2</span> / 341 шт
+                                            </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-3">
                                                 <div class="quick-choose-item__col--title">Стоимость от:</div>
-                                                <span class="quick-choose-item__price">от 1 439 руб</span>
+                                                <span class="quick-choose-item__price">от 1 439 руб/м<span class="text-super">2</span></span>
                                             </div>
                                         </a>                                                                                                               
                                     </div>
                                 </div>
                             </div>   
-                        </div>                    
+                        </div>   
+                        
+                        <div class="product-page-filter-mobile">
+                            <a href="#" class="product-page-filter-mobile__sort js-product-sort">сортировать</a>
+                            <a href="#" class="product-page-filter-mobile__filter js-product-filter">фильтр</a>
+                            
+                            <div class="aside-product-sort">
+                                <div class="aside-product-sort__title js-product-sort">Сортировать</div>
+                                <ul class="pr-sort-list">
+                                        <li>
+                                            <a href="#" class="active"><span class="icon-sort icon-sort-asc">Цена по возрастанию</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-desc">Цена по убыванию</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-asc">Алфавит от А-Я</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-desc">Алфавит от Я-А</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-asc">м<span class="text-super">2</span> по возрастанию</span></a> 
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-sort icon-sort-desc">м<span class="text-super">2</span> по убыванию</span></a> 
+                                        </li>
+                                    </ul>
+                            </div>
+                            
+                            <div class="aside product-aside-filter" id="aside-filter">       
+                                <div class="aside-title-mobile">
+                                    <a href="#" class="filter-close js-filter-close"></a>
+                                    <div class="aside__title">Фильтр <a href="#" class="aside__title-btn">сбросить</a></div>
+                                </div>
+
+                                <div class="aside-inner">                            
+
+                                    <a href="#" class="filter-close js-filter-close"></a>
+                                    <div class="aside__title">Фильтр</div>
+
+                                    <div class="filter-body">
+
+                                        <div class="filter-section-search">
+                                            <input type="text" name="filter-search" class="filter-input" placeholder="Поиск по наименованию">
+                                        </div>
+
+                                        <div class="filter-section active">
+                                            <div class="filter-section-title">Материал</div>
+                                            <div class="filter-section-content">
+                                                    <label>
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='33' id="material_33"
+                                                        rel="material-33"
+                                                        data-filter-type="material"
+                                                         />
+                                                        <span><a href="#">Мрамор <span class="cnt">(206)</span></a></span>
+                                                    </label>
+                                                    <label class="active">
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='35' id="material_35"
+                                                        rel="material-35"
+                                                        data-filter-type="material" checked
+                                                         />
+                                                        <span><a href="#">Гранит <span class="cnt">(79)</span></a></span>
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='36' id="material_36"
+                                                        rel="material-36"
+                                                        data-filter-type="material"
+                                                         />
+                                                        <span><a href="#">Оникс <span class="cnt">(39)</span></a></span>
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='37' id="material_37"
+                                                            rel="material-37"
+                                                            data-filter-type="material"
+                                                         />
+                                                        <span><a href="#">Травертин <span class="cnt">(20)</span></a></span>
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='38' id="material_38"
+                                                        rel="material-38"
+                                                        data-filter-type="material"
+                                                         />
+                                                        <span><a href="#">Кварцит <span class="cnt">(21)</span></a></span>
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='39' id="material_39"
+                                                        rel="material-39"
+                                                        data-filter-type="material"
+                                                         />
+                                                        <span><a href="#">Сланец <span class="cnt">(1)</span></a></span>
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='40' id="material_40"
+                                                        rel="material-40"
+                                                        data-filter-type="material"
+                                                         />
+                                                        <span><a href="#">Известняк <span class="cnt">(6)</span></a></span>
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='51' id="material_51"
+                                                        rel="material-51"
+                                                        data-filter-type="material"
+                                                         />
+                                                        <span>Песчаник <span class="cnt">(1)</span></span>
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="checkbox" class="filter-item" name='filter[material][]' value='41' id="material_41"
+                                                        rel="material-41"
+                                                        data-filter-type="material"
+                                                         />
+                                                        <span><a href="#">Полудрагоценные камни <span class="cnt">(9)</span></a></span>
+                                                    </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="filter-section active">
+                                            <div class="filter-section-title">Цвет</div>
+                                            <div class="filter-section-content">
+                                                <div class="filter-section-color">
+                                                    <label class="checkbox-color" style="background-color: #ffffff;" title="Белый">
+                                                        <input type="checkbox" class="filter-item" name='filter[color][]' value='13' id="color_13" rel="color-13" data-filter-type="color"/>
+                                                        <a href="#"></a>
+                                                    </label>
+                                                    <label class="checkbox-color" style="background-color: #ccb07b;"title="Бежевый">
+                                                    <input type="checkbox" class="filter-item" name='filter[color][]' value='14'
+                                                           id="color_14"
+                                                           rel="color-14"
+                                                           data-filter-type="color"
+                                                                               />
+                                                        <a href="#"></a>
+                                                    </label>
+                                                    <label class="checkbox-color"
+                                                       style="background-color: #000000;"
+                                                       title="Черный">
+                                                        <input type="checkbox" class="filter-item" name='filter[color][]' value='15'
+                                                           id="color_15"
+                                                           rel="color-15"
+                                                           data-filter-type="color"
+                                                                               />
+                                                        <a href="#"></a>
+                                                    </label>
+                                                    <label class="checkbox-color"
+                                                       style="background-color: #5a3528;"
+                                                       title="Коричневый">
+                                                    <input type="checkbox" class="filter-item" name='filter[color][]' value='16'
+                                                           id="color_16"
+                                                           rel="color-16"
+                                                           data-filter-type="color"
+                                                                               />
+                                                        <a href="#"></a>
+                                                    </label>
+                                                                <label class="checkbox-color"
+                                                       style="background-color: #b3b3b3;"
+                                                       title="Серый">
+                                                    <input type="checkbox" class="filter-item" name='filter[color][]' value='17'
+                                                           id="color_17"
+                                                           rel="color-17"
+                                                           data-filter-type="color"
+                                                                               />
+                                                                                                <a href="#"></a>
+                                                                            </label>
+                                                                <label class="checkbox-color"
+                                                       style="background-color: #ffd200;"
+                                                       title="Жёлтый">
+                                                    <input type="checkbox" class="filter-item" name='filter[color][]' value='18'
+                                                           id="color_18"
+                                                           rel="color-18"
+                                                           data-filter-type="color"
+                                                                               />
+                                                                                                <a href="#"></a>
+                                                                            </label>
+                                                                <label class="checkbox-color"
+                                                       style="background-color: #cd5ed4;"
+                                                       title="Розовый">
+                                                    <input type="checkbox" class="filter-item" name='filter[color][]' value='19'
+                                                           id="color_19"
+                                                           rel="color-19"
+                                                           data-filter-type="color"
+                                                                               />
+                                                                                                <a href="#"></a>
+                                                                            </label>
+                                                                <label class="checkbox-color"
+                                                       style="background-color: #c95541;"
+                                                       title="Красный">
+                                                    <input type="checkbox" class="filter-item" name='filter[color][]' value='20'
+                                                           id="color_20"
+                                                           rel="color-20"
+                                                           data-filter-type="color"
+                                                                               />
+                                                                                                <a href="#"></a>
+                                                                            </label>
+                                                                <label class="checkbox-color"
+                                                       style="background-color: #54a74b;"
+                                                       title="Зелёный">
+                                                    <input type="checkbox" class="filter-item" name='filter[color][]' value='21'
+                                                           id="color_21"
+                                                           rel="color-21"
+                                                           data-filter-type="color"
+                                                                               />
+                                                                                                <a href="#"></a>
+                                                                            </label>
+                                                                <label class="checkbox-color"
+                                                       style="background-color: #0030ff;"
+                                                       title="Синий">
+                                                    <input type="checkbox" class="filter-item" name='filter[color][]' value='22'
+                                                           id="color_22"
+                                                           rel="color-22"
+                                                           data-filter-type="color"
+                                                                               />
+                                                                                                <a href="#"></a>
+                                                                            </label>
+                                                        <div class="clearfix"></div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filter-section active">
+                                            <div class="filter-section-title">Название</div>
+                                            <div class="filter-section-content">
+                                                <div class="filter-section-chars">
+                                                <div class="filter-tabs">
+                                                    <ul class="filter-tabs-nav">
+                                                        <li class="filter-tabs-nav-link btn btn_black-border btn_sm current" data-tab="tab-1">рус</li>
+                                                        <li class="filter-tabs-nav-link btn btn_black-border btn_sm" data-tab="tab-2">eng</li>
+                                                    </ul>
+                                                    <div class="filter-tabs-wrapper-content">
+                                                        <div id="tab-1" class="filter-tabs-content current">
+                                                            <div class="filter-chars">
+                                                            <label class="checkbox-char" title="а">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-а' value='а'  >
+                                        А                        </label>
+                                                                                <label class="checkbox-char" title="б">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-б' value='б'  >
+                                        Б                        </label>
+                                                                                <label class="checkbox-char active" title="в">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-в' value='в'  checked >
+                                        В                        </label>
+                                                                                <label class="checkbox-char active" title="г">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-г' value='г'  checked >
+                                        Г                        </label>
+                                                                                <label class="checkbox-char active" title="д">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-д' value='д'  checked >
+                                        Д                        </label>
+                                                                                <label class="checkbox-char disabled" title="е">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-е' value='е'   disabled>
+                                        Е                        </label>
+                                                                                <label class="checkbox-char disabled" title="ж">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-ж' value='ж'   disabled>
+                                        Ж                        </label>
+                                                                                <label class="checkbox-char" title="з">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-з' value='з'  >
+                                        З                        </label>
+                                                                                <label class="checkbox-char" title="и">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-и' value='и'  >
+                                        И                        </label>
+                                                                                <label class="checkbox-char" title="к">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-к' value='к'  >
+                                        К                        </label>
+                                                                                <label class="checkbox-char" title="л">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-л' value='л'  >
+                                        Л                        </label>
+                                                                                <label class="checkbox-char" title="м">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-м' value='м'  >
+                                        М                        </label>
+                                                                                <label class="checkbox-char" title="н">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-н' value='н'  >
+                                        Н                        </label>
+                                                                                <label class="checkbox-char" title="о">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-о' value='о'  >
+                                        О                        </label>
+                                                                                <label class="checkbox-char" title="п">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-п' value='п'  >
+                                        П                        </label>
+                                                                                <label class="checkbox-char" title="р">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-р' value='р'  >
+                                        Р                        </label>
+                                                                                <label class="checkbox-char" title="с">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-с' value='с'  >
+                                        С                        </label>
+                                                                                <label class="checkbox-char" title="т">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-т' value='т'  >
+                                        Т                        </label>
+                                                                                <label class="checkbox-char disabled" title="у">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-у' value='у'   disabled>
+                                        У                        </label>
+                                                                                <label class="checkbox-char" title="ф">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-ф' value='ф'  >
+                                        Ф                        </label>
+                                                                                <label class="checkbox-char disabled" title="х">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-х' value='х'   disabled>
+                                        Х                        </label>
+                                                                                <label class="checkbox-char disabled" title="ц">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-ц' value='ц'   disabled>
+                                        Ц                        </label>
+                                                                                <label class="checkbox-char" title="ч">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-ч' value='ч'  >
+                                        Ч                        </label>
+                                                                                <label class="checkbox-char disabled" title="ш">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-ш' value='ш'   disabled>
+                                        Ш                        </label>
+                                                                                <label class="checkbox-char disabled" title="щ">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-щ' value='щ'   disabled>
+                                        Щ                        </label>
+                                                                                <label class="checkbox-char" title="э">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-э' value='э'  >
+                                        Э                        </label>
+                                                                                <label class="checkbox-char" title="ю">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-ю' value='ю'  >
+                                        Ю                        </label>
+                                                                                <label class="checkbox-char" title="я">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter" name='filter[letter][]' rel='letter-я' value='я'  >
+                                        Я                        </label>
+                                                        </div>
+                                                        </div>
+                                                        <div id="tab-2" class="filter-tabs-content"> 
+                                                            <div class="filter-chars">
+                                                             <label class="checkbox-char" title="a">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-a' value='a'  >
+                                        A                        </label>
+                                                                                <label class="checkbox-char" title="b">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-b' value='b'  >
+                                        B                        </label>
+                                                                                <label class="checkbox-char" title="c">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-c' value='c'  >
+                                        C                        </label>
+                                                                                <label class="checkbox-char" title="d">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-d' value='d'  >
+                                        D                        </label>
+                                                                                <label class="checkbox-char" title="e">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-e' value='e'  >
+                                        E                        </label>
+                                                                                <label class="checkbox-char" title="f">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-f' value='f'  >
+                                        F                        </label>
+                                                                                <label class="checkbox-char" title="g">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-g' value='g'  >
+                                        G                        </label>
+                                                                                <label class="checkbox-char disabled" title="h">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-h' value='h'   disabled>
+                                        H                        </label>
+                                                                                <label class="checkbox-char" title="i">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-i' value='i'  >
+                                        I                        </label>
+                                                                                <label class="checkbox-char" title="j">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-j' value='j'  >
+                                        J                        </label>
+                                                                                <label class="checkbox-char" title="k">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-k' value='k'  >
+                                        K                        </label>
+                                                                                <label class="checkbox-char" title="l">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-l' value='l'  >
+                                        L                        </label>
+                                                                                <label class="checkbox-char" title="m">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-m' value='m'  >
+                                        M                        </label>
+                                                                                <label class="checkbox-char" title="n">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-n' value='n'  >
+                                        N                        </label>
+                                                                                <label class="checkbox-char" title="o">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-o' value='o'  >
+                                        O                        </label>
+                                                                                <label class="checkbox-char" title="p">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-p' value='p'  >
+                                        P                        </label>
+                                                                                <label class="checkbox-char disabled" title="q">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-q' value='q'   disabled>
+                                        Q                        </label>
+                                                                                <label class="checkbox-char" title="r">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-r' value='r'  >
+                                        R                        </label>
+                                                                                <label class="checkbox-char" title="s">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-s' value='s'  >
+                                        S                        </label>
+                                                                                <label class="checkbox-char" title="t">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-t' value='t'  >
+                                        T                        </label>
+                                                                                <label class="checkbox-char disabled" title="u">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-u' value='u'   disabled>
+                                        U                        </label>
+                                                                                <label class="checkbox-char" title="v">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-v' value='v'  >
+                                        V                        </label>
+                                                                                <label class="checkbox-char" title="w">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-w' value='w'  >
+                                        W                        </label>
+                                                                                <label class="checkbox-char disabled" title="x">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-x' value='x'   disabled>
+                                        X                        </label>
+                                                                                <label class="checkbox-char disabled" title="y">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-y' value='y'   disabled>
+                                        Y                        </label>
+                                                                                <label class="checkbox-char disabled" title="z">
+                                        <input type="checkbox" class="filter-item" data-filter-type="letter_en" name='filter[letter][]' rel='letter_en-z' value='z'   disabled>
+                                        Z                        </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>                            
+
+                                        <div class="filter-section active">
+                                            <div class="filter-section-title">Вид изделия</div>
+
+                                            <div class="filter-section-content">
+                                                    <label class="">
+                                                <input type="checkbox" class="filter-item" name='filter[stoneType][]' value='28' id="stoneType_28"
+                                                rel="stoneType-28"
+                                                data-filter-type="stoneType" checked
+                                                         />
+
+                                                        <span>Слэб <span class="cnt">(358)</span></span>
+                                                    </label>
+                                                    <label class="">
+                                                <input type="checkbox" class="filter-item" name='filter[stoneType][]' value='30' id="stoneType_30"
+                                                rel="stoneType-30"
+                                                data-filter-type="stoneType"
+                                                         />
+
+                                                        <span>Плитка <span class="cnt">(65)</span></span>
+                                                    </label>
+                                                    <label class="">
+                                                <input type="checkbox" class="filter-item" name='filter[stoneType][]' value='31' id="stoneType_31"
+                                                rel="stoneType-31"
+                                                data-filter-type="stoneType"
+                                                         />
+
+                                                        <span>Мозаика <span class="cnt">(9)</span></span>
+                                                    </label>
+                                                    <label class="">
+                                                <input type="checkbox" class="filter-item" name='filter[stoneType][]' value='32' id="stoneType_32"
+                                                rel="stoneType-32"
+                                                data-filter-type="stoneType"
+                                                         />
+
+                                                        <span>Блоки <span class="cnt">(3)</span></span>
+                                                    </label>
+                                                    <label class="">
+                                                <input type="checkbox" class="filter-item" name='filter[stoneType][]' value='48' id="stoneType_48"
+                                                rel="stoneType-48"
+                                                data-filter-type="stoneType"
+                                                         />
+
+                                                        <span>Балясины <span class="cnt">(1)</span></span>
+                                                    </label>
+                                                    <label class="">
+                                                <input type="checkbox" class="filter-item" name='filter[stoneType][]' value='47' id="stoneType_47"
+                    rel="stoneType-47"
+                    data-filter-type="stoneType"
+                             />
+
+                            <span>Раковина <span class="cnt">(1)</span></span>
+                        </label>
+                </div>
+                                        </div>
+
+                                        <div class="filter-section active">
+                                            <div class="filter-section-title">Стоимость</div>
+
+                                            <div class="filter-section-content">    
+                                                <ul class="filter-price">
+                                                    <li class="filter-price__item">
+                                                        <a href="#" class="filter-price__link btn btn_black-border btn_green-black btn_sm">RUB</a>
+                                                    </li>
+                                                    <li class="filter-price__item">
+                                                        <a href="#" class="filter-price__link btn btn_black-border btn_sm">EUR</a>
+                                                    </li>
+                                                    <li class="filter-price__item">
+                                                        <a href="#" class="filter-price__link btn btn_black-border btn_sm">USD</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="price-range">
+                                                    <div id="filter-slider-prices"></div>
+                                                    <div class="filter-slider-prices-values">
+                                                        <input id="price_from" name="filter[price_from]" class="input-range" value="0" />    
+                                                        <span>-</span>
+                                                        <input id="price_to" name="filter[price_to]"  class="input-range" />
+                                                    </div>
+                                                </div>                                      
+                                            </div>
+                                        </div>
+
+                                        <div class="filter-section">
+                                            <div class="filter-section-title">Толщина, мм</div>
+                                            <div class="filter-section-content">
+                                                <div class="filter-section-3col">
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='10' id="thickness_10"
+                                                    rel="thickness-10"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>10</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='12' id="thickness_12"
+                                                    rel="thickness-12"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>12</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='15' id="thickness_15"
+                                                    rel="thickness-15"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>15</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='20' id="thickness_20"
+                                                    rel="thickness-20"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>20</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='30' id="thickness_30"
+                                                    rel="thickness-30"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>30</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='40' id="thickness_40"
+                                                    rel="thickness-40"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>40</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='50' id="thickness_50"
+                                                    rel="thickness-50"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>50</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='150' id="thickness_150"
+                                                    rel="thickness-150"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>150</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='200' id="thickness_200"
+                                                    rel="thickness-200"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>200</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='230' id="thickness_230"
+                                                    rel="thickness-230"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>230</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='450' id="thickness_450"
+                                                    rel="thickness-450"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>450</span>
+                                                </label>
+                                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[thickness][]' value='970' id="thickness_970"
+                                                    rel="thickness-970"
+                                                    data-filter-type="thickness"
+                                                                 />
+
+                                                    <span>970</span>
+                                                </label>
+                                                        <div class="clearfix"></div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filter-section">
+                                            <div class="filter-section-title">Статус товара</div>
+                                            <div class="filter-section-content">
+                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[status][]' value='instock' id="status_instock"
+                                                    rel="status-instock"
+                                                    data-filter-type="status"
+                                                     />
+
+                                                    <span>В наличии <span class="cnt">(372)</span></span>
+                                                </label>
+                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[status][]' value='sale' id="status_sale"
+                                                    rel="status-sale"
+                                                    data-filter-type="status"
+                                                     />
+
+                                                    <span>Распродажа <span class="cnt">(63)</span></span>
+                                                </label>
+                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[status][]' value='onway' id="status_onway"
+                                                    rel="status-onway"
+                                                    data-filter-type="status"
+                                                     />
+
+                                                    <span>В пути <span class="cnt">(5)</span></span>
+                                                </label>
+                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[status][]' value='new' id="status_new"
+                                                    rel="status-new"
+                                                    data-filter-type="status"
+                                                     />
+
+                                                    <span>Новинки <span class="cnt">(83)</span></span>
+                                                </label>
+                                                <label class="">
+                                                    <input type="checkbox" class="filter-item" name='filter[status][]' value='toorder' id="status_toorder"
+                                                    rel="status-toorder"
+                                                    data-filter-type="status"
+                                                     />
+
+                                                    <span>Под заказ <span class="cnt">(11)</span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="filter-section">
+                                            <div class="filter-section-title">Обработка</div>
+                                            <div class="filter-section-content">
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[processing][]' value='23' id="processing_23"
+                                            rel="processing-23"
+                                            data-filter-type="processing"
+                                                     />
+
+                                                    <span>Полировка <span class="cnt">(345)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[processing][]' value='25' id="processing_25"
+                                            rel="processing-25"
+                                            data-filter-type="processing"
+                                                     />
+
+                                                    <span>Антик <span class="cnt">(31)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[processing][]' value='26' id="processing_26"
+                                            rel="processing-26"
+                                            data-filter-type="processing"
+                                                     />
+
+                                                    <span>Шлифовка <span class="cnt">(22)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[processing][]' value='27' id="processing_27"
+                                            rel="processing-27"
+                                            data-filter-type="processing"
+                                                     />
+
+                                                    <span>Термо <span class="cnt">(7)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[processing][]' value='24' id="processing_24"
+                                            rel="processing-24"
+                                            data-filter-type="processing"
+                                                     />
+
+                                                    <span>Бучардо <span class="cnt">(1)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[processing][]' value='52' id="processing_52"
+                                            rel="processing-52"
+                                            data-filter-type="processing"
+                                                     />
+
+                                                    <span>Скала <span class="cnt">(1)</span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="filter-section">
+                                            <div class="filter-section-title">Страна</div>
+                                            <div class="filter-section-content">
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='7' id="country_7"
+                                            rel="country-7"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Италия <span class="cnt">(184)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='8' id="country_8"
+                                            rel="country-8"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Испания <span class="cnt">(59)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='4' id="country_4"
+                                            rel="country-4"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Греция <span class="cnt">(24)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='11' id="country_11"
+                                            rel="country-11"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Турция <span class="cnt">(59)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='6' id="country_6"
+                                            rel="country-6"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Индия <span class="cnt">(32)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='1' id="country_1"
+                                            rel="country-1"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Бразилия <span class="cnt">(24)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='9' id="country_9"
+                                            rel="country-9"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Китай <span class="cnt">(21)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='10' id="country_10"
+                                            rel="country-10"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Португалия <span class="cnt">(5)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='5' id="country_5"
+                                            rel="country-5"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Египет <span class="cnt">(7)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='12' id="country_12"
+                                            rel="country-12"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Россия <span class="cnt">(3)</span></span>
+                                                </label>
+                                                <label class="">
+                                            <input type="checkbox" class="filter-item" name='filter[country][]' value='3' id="country_3"
+                                            rel="country-3"
+                                            data-filter-type="country"
+                                                     />
+
+                                                    <span>Германия <span class="cnt">(1)</span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!--<div class="aside-filter-btn aside-filter-btn_mobile">
+                                    <div class="filter-btn">
+                                        <a href="#" class="btn btn_green btn_sm">применить фильтр</a>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                            
+                        </div>
                         
                         <div class="quick-choose-step quick-choose-step-2">
                             <div class="pr-cols">
                                 <div class="pr-cols__col pr-cols__col-full">
-                                    <div class="pr-label__box">
-                                        <div class="pr-label">Быстрый выбор</div>    
-                                        <div class="pr-sort">
-                                            <div class="pr-sort__title">
-                                                <span class="icon-sort icon-sort-desc">По квадратным метрам </span>
-                                            </div>
-                                            <div class="pr-sort__content">
-                                                <ul class="pr-sort-list">
-                                                    <li>
-                                                        <a href="#" class="active"><span class="icon-sort icon-sort-desc">По квадратным метрам </span></a> 
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><span class="icon-sort icon-sort-asc">По квадратным метрам </span></a> 
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><span class="icon-sort icon-sort-desc">По размеру</span></a> 
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><span class="icon-sort icon-sort-asc">По размеру </span></a> 
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><span class="icon-sort icon-sort-desc">По алфавиту </span></a> 
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><span class="icon-sort icon-sort-asc">По алфавиту </span></a> 
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
                                     <div class="quick-choose" id="quick-choose-part">
                                         <a href="05_%D1%81%D1%82%D1%80-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0.html" class="quick-choose-item quick-choose-item_part" data-part="1">                                            
                                             <div class="quick-choose-item__col quick-choose-item__col-1">
@@ -426,7 +1230,24 @@
                                                 <div class="quick-choose-item__part">
                                                     <div class="quick-choose-item__name">Партия ГТ</div>
                                                     <div class="quick-choose-item__mm">50.7 м<span class="text-super">2</span> </div>
-                                                </div>                                                
+                                                </div> 
+                                                <div class="quick-choose-item__part-m">
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Партия <span><b>ГТ</b></span></li>
+                                                        <li>Склад <span><b>Москва</b></span></li>
+                                                    </ul>
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Стоимость <span><b>от 1 439 руб/м<span class="text-super">2</span></b></span></li>
+                                                        <li><span>50.7 м<span class="text-super">2</span></span></li>
+                                                    </ul>
+                                                </div>
+                                                    
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Склад</span>
+                                                    <span class="quick-choose-item__info-val">Москва</span>                                                
+                                                </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-2">
                                                 <div class="quick-choose-item__info">
@@ -444,6 +1265,12 @@
                                                 <div class="quick-choose-item__info">
                                                     <span class="quick-choose-item__info-name">Доступно</span>
                                                     <span class="quick-choose-item__info-val">50.7 м<span class="text-super">2</span></span>                                                
+                                                </div>                                               
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Стоимость от:</span>
+                                                    <span class="quick-choose-item__info-val">от 1 439 руб/м<span class="text-super">2</span></span>  
                                                 </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-btn">
@@ -456,7 +1283,23 @@
                                                 <div class="quick-choose-item__part">
                                                     <div class="quick-choose-item__name">Партия ГТ</div>
                                                     <div class="quick-choose-item__mm">4.41 м<span class="text-super">2</span> </div>                                                    
-                                                </div>                                                
+                                                </div> 
+                                                <div class="quick-choose-item__part-m">
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Партия <span><b>ГТ</b></span></li>
+                                                        <li>Склад <span><b>Москва</b></span></li>
+                                                    </ul>
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Стоимость <span><b>от 1 439 руб/м<span class="text-super">2</span></b></span></li>
+                                                        <li><span>50.7 м<span class="text-super">2</span></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Склад</span>
+                                                    <span class="quick-choose-item__info-val">Москва</span>                                                
+                                                </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-2">
                                                 <div class="quick-choose-item__info">
@@ -474,6 +1317,12 @@
                                                 <div class="quick-choose-item__info">
                                                     <span class="quick-choose-item__info-name">Доступно</span>
                                                     <span class="quick-choose-item__info-val">50.7 м<span class="text-super">2</span></span>                                                
+                                                </div>                                               
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Стоимость от:</span>
+                                                    <span class="quick-choose-item__info-val">от 1 439 руб/м<span class="text-super">2</span></span>  
                                                 </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-btn">
@@ -487,7 +1336,23 @@
                                                     <div class="quick-choose-item__name">Партия ГУ</div>
                                                     <div class="quick-choose-item__mm">18.99 м<span class="text-super">2</span> </div>
                                                     
-                                                </div>                                                
+                                                </div>   
+                                                <div class="quick-choose-item__part-m">
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Партия <span><b>ГТ</b></span></li>
+                                                        <li>Склад <span><b>Москва</b></span></li>
+                                                    </ul>
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Стоимость <span><b>от 1 439 руб/м<span class="text-super">2</span></b></span></li>
+                                                        <li><span>50.7 м<span class="text-super">2</span></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Склад</span>
+                                                    <span class="quick-choose-item__info-val">Москва</span>                                                
+                                                </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-2">
                                                 <div class="quick-choose-item__info">
@@ -505,6 +1370,12 @@
                                                 <div class="quick-choose-item__info">
                                                     <span class="quick-choose-item__info-name">Доступно</span>
                                                     <span class="quick-choose-item__info-val">50.7 м<span class="text-super">2</span></span>                                                
+                                                </div>                                               
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Стоимость от:</span>
+                                                    <span class="quick-choose-item__info-val">от 1 439 руб/м<span class="text-super">2</span></span>  
                                                 </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-btn">
@@ -518,7 +1389,23 @@
                                                     <div class="quick-choose-item__name">Партия ГЧ</div>
                                                     <div class="quick-choose-item__mm">44.03 м<span class="text-super">2</span> </div>
                                                    
-                                                </div>                                                
+                                                </div> 
+                                                <div class="quick-choose-item__part-m">
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Партия <span><b>ГТ</b></span></li>
+                                                        <li>Склад <span><b>Москва</b></span></li>
+                                                    </ul>
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Стоимость <span><b>от 1 439 руб/м<span class="text-super">2</span></b></span></li>
+                                                        <li><span>50.7 м<span class="text-super">2</span></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Склад</span>
+                                                    <span class="quick-choose-item__info-val">Москва</span>                                                
+                                                </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-2">
                                                 <div class="quick-choose-item__info">
@@ -536,6 +1423,12 @@
                                                 <div class="quick-choose-item__info">
                                                     <span class="quick-choose-item__info-name">Доступно</span>
                                                     <span class="quick-choose-item__info-val">50.7 м<span class="text-super">2</span></span>                                                
+                                                </div>                                               
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Стоимость от:</span>
+                                                    <span class="quick-choose-item__info-val">от 1 439 руб/м<span class="text-super">2</span></span>  
                                                 </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-btn">
@@ -549,7 +1442,23 @@
                                                     <div class="quick-choose-item__name">Партия ГЭ</div>
                                                     <div class="quick-choose-item__mm">13.46 м<span class="text-super">2</span> </div>
                                                    
-                                                </div>                                                
+                                                </div>   
+                                                <div class="quick-choose-item__part-m">
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Партия <span><b>ГТ</b></span></li>
+                                                        <li>Склад <span><b>Москва</b></span></li>
+                                                    </ul>
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Стоимость <span><b>от 1 439 руб/м<span class="text-super">2</span></b></span></li>
+                                                        <li><span>50.7 м<span class="text-super">2</span></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                           <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Склад</span>
+                                                    <span class="quick-choose-item__info-val">Москва</span>                                                
+                                                </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-2">
                                                 <div class="quick-choose-item__info">
@@ -567,6 +1476,12 @@
                                                 <div class="quick-choose-item__info">
                                                     <span class="quick-choose-item__info-name">Доступно</span>
                                                     <span class="quick-choose-item__info-val">50.7 м<span class="text-super">2</span></span>                                                
+                                                </div>                                               
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Стоимость от:</span>
+                                                    <span class="quick-choose-item__info-val">от 1 439 руб/м<span class="text-super">2</span></span>  
                                                 </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-btn">
@@ -580,7 +1495,23 @@
                                                     <div class="quick-choose-item__name">Партия ГЭ2</div>
                                                     <div class="quick-choose-item__mm">13.46 м<span class="text-super">2</span> </div>
                                                     
-                                                </div>                                                
+                                                </div> 
+                                                <div class="quick-choose-item__part-m">
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Партия <span><b>ГТ</b></span></li>
+                                                        <li>Склад <span><b>Москва</b></span></li>
+                                                    </ul>
+                                                    <ul class="quick-choose-item__part-list">
+                                                        <li>Стоимость <span><b>от 1 439 руб/м<span class="text-super">2</span></b></span></li>
+                                                        <li><span>50.7 м<span class="text-super">2</span></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Склад</span>
+                                                    <span class="quick-choose-item__info-val">Москва</span>                                                
+                                                </div>                                               
                                             </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-2">
                                                 <div class="quick-choose-item__info">
@@ -600,6 +1531,12 @@
                                                     <span class="quick-choose-item__info-val">50.7 м<span class="text-super">2</span></span>                                                
                                                 </div>                                               
                                             </div>
+                                            <div class="quick-choose-item__col quick-choose-item__col-2 quick-choose-item__col-m-hidden">
+                                                <div class="quick-choose-item__info">
+                                                    <span class="quick-choose-item__info-name">Стоимость от:</span>
+                                                    <span class="quick-choose-item__info-val">от 1 439 руб/м<span class="text-super">2</span></span>  
+                                                </div>                                               
+                                            </div>
                                             <div class="quick-choose-item__col quick-choose-item__col-btn">
                                                 <span class="quick-choose-item__btn">выбрать</span>
                                             </div>
@@ -608,10 +1545,8 @@
                                     <div class="quick-choose-btn">
                                         <a href="#" class="btn btn_sm btn_black-border btn_show-more js-quick-choose-more">Ещё</a>
                                     </div>
-                                </div>
-                                
-                            </div>
-                                                      
+                                </div>                                
+                            </div>                                                      
                         </div>
                         
                         <div class="pr-share">

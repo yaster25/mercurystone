@@ -697,7 +697,7 @@ function initSlider() {
           },
           onInit: function() {
               if($(this).val()<1){
-                  $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Тип изделия</i>');
+                  //$(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Тип изделия</i>');
               }
               
           },
@@ -712,7 +712,7 @@ function initSlider() {
           },
          onInit: function() {
               if($(this).val()<1){
-                  $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Толщина</i>');
+                  //$(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Толщина</i>');
               }
               
           },
@@ -728,7 +728,7 @@ function initSlider() {
           },
          onInit: function() {
               if($(this).val()<1){
-                  $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Партия</i>');
+                  //$(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Партия</i>');
               }
               
           },
@@ -745,12 +745,12 @@ function initSlider() {
              $('#quick-choose-size .quick-choose-item-2[data-size="'+size+'"]').addClass('active');
              
              if(size<1){
-                 $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Размер</i>');
+                 //$(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Размер</i>');
              }
           },
           onInit: function() {
               if($(this).val()<1){
-                  $(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Размер</i>');
+                  //$(this).parents('.selectric-wrapper').find('.label').html('Выберите - <i>Размер</i>');
               }
               
           },

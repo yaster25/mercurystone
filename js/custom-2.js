@@ -72,4 +72,30 @@
       }
     })
      
+     $('.js-product-sort').on('click', function(event) {
+         $('body').toggleClass('aside-product-sort-open');
+         $('.aside-product-sort').slideToggle();
+         return false;
+	});	
+     
+     $(document).bind("click",function(event) {         
+        if ($(event.target).closest(".aside-product-sort, .js-product-sort").length) return;
+        if($('body').hasClass('aside-product-sort-open')){              
+            $('body').removeClass('aside-product-sort-open');
+            $('.aside-product-sort').slideUp();
+            return false;
+        }
+         event.stopPropagation();
+      });
+     
+     $('.js-product-filter').on('click', function(event) {
+         $('.product-aside-filter').toggleClass('active');
+         return false;
+	});	
+     
+     $('.js-filter-close').on('click', function(event) {        
+        $('.product-aside-filter').toggleClass('active');
+        return false;        
+	});
+     
  });
