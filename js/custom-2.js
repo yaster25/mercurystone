@@ -98,4 +98,15 @@
         return false;        
 	});
      
+     $('.btn-check-price .btn').on('click', function(event) {        
+        $('.btn-check-price .btn').removeClass('btn_green-black');
+        $(this).addClass('btn_green-black');
+         $('.pr-box-info-calc__price .price-1').addClass('hidden');
+         $('.pr-box-info-calc__price .price-2').addClass('hidden');
+         
+         $('.pr-box-info-calc__price .'+ $(this).attr('data-price')).removeClass('hidden');
+         
+        return false;        
+	});
+     
  });
